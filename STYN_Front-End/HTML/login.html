@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - YULU NICARAGUA</title>
+  <link rel="stylesheet" href="../Css/diseniologin_registro.css">
+</head>
+<body>
+  <form id="form-login">
+    <h2>Iniciar sesión</h2>
+    <form id="loginForm">
+      <input type="text" id="email" placeholder="Correo o usuario" required>
+      <input type="password" id="password" placeholder="Contraseña" required>
+      <button type="submit">Entrar</button>
+    </form>
+    <p>¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+  </div>
+
+  <script src="../JS/api.js"></script>
+  <script src="../JS/auth.js"></script>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      loginUser(
+        document.getElementById("email").value,
+        document.getElementById("password").value
+      );
+    });
+  </script>
+</body>
+</html>

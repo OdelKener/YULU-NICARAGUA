@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Guía Turístico</title>
+  <link rel="stylesheet" href="../Css/disenioregistro_guia.css">
+</head>
+<body>
+ <form id="form-registro-guia" enctype="multipart/form-data">
+    <!-- Mostrar usuario logueado -->
+    <label>Usuario:</label>
+    <input type="text" id="username" readonly>
+
+    <label>Sexo:</label>
+    <select name="sexo" required>
+      <option value="M">Masculino</option>
+      <option value="F">Femenino</option>
+    </select>
+
+    <label>Cédula:</label>
+    <input type="text" name="cedula" required>
+
+    <label>Foto cédula frontal:</label>
+    <input type="file" name="foto_cedula_frontal" accept="image/*" required>
+
+    <label>Foto cédula reverso:</label>
+    <input type="file" name="foto_cedula_reverso" accept="image/*" required>
+
+    <label>Certificado guía:</label>
+    <input type="file" name="certificado_guia" accept=".pdf,.jpg,.png">
+
+    <label>Licencia conducir:</label>
+    <input type="file" name="licencia_conducir" accept=".pdf,.jpg,.png">
+
+    <label>Idiomas:</label>
+    <input type="text" name="idiomas" placeholder="Español, Inglés, Francés" required>
+
+    <label>Especialidades:</label>
+    <input type="text" name="especialidades">
+
+    <label>Experiencia:</label>
+    <textarea name="experiencia" required></textarea>
+
+    <label>Años experiencia:</label>
+    <input type="number" name="anos_experiencia" value="0" min="0">
+
+    <label>Precio por hora:</label>
+    <input type="number" step="0.01" name="precio_por_hora" value="20.00">
+
+    <label>Precio por día:</label>
+    <input type="number" step="0.01" name="precio_por_dia" value="100.00">
+
+    <label>Zonas de cobertura:</label>
+    <input type="text" name="zonas_cobertura" value="Granada">
+
+    <label>WhatsApp:</label>
+    <input type="text" name="telefono_whatsapp">
+
+    <label>Facebook:</label>
+    <input type="url" name="enlace_facebook">
+
+    <label>Instagram:</label>
+    <input type="url" name="enlace_instagram">
+
+    <button type="submit">Registrar Guía</button>
+  </form>
+
+  <script src="../JS/registroguia.js"></script>
+</body>
+</html>

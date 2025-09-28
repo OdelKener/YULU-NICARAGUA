@@ -1,0 +1,56 @@
+body {
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+form#form-registro-guia {
+  background-color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+form#form-registro-guia h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+form#form-registro-guia label {
+  margin-top: 0.8rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+form#form-registro-guia input,
+form#form-registro-guia select,
+form#form-registro-guia textarea {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+form#form-registro-guia button {
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #27ae60;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form#form-registro-guia button:hover {
+  background-color: #219150;
+}
+
+
