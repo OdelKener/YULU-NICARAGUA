@@ -1,0 +1,243 @@
+[
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Volcán Mombacho",
+      "tipo": "reserva_natural",
+      "departamento": 6,
+      "descripcion": "Reserva con selva nublada, orquídeas y senderos alrededor del cráter del volcán Mombacho.",
+      "direccion": "Carretera a Catarina, Granada",
+      "latitud": 11.8267,
+      "longitud": -85.9675
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Laguna de Apoyo",
+      "tipo": "reserva_natural",
+      "departamento": 11,
+      "descripcion": "Cráter volcánico con laguna de aguas cristalinas, ideal para nadar, kayak y ecoturismo.",
+      "direccion": "Entre Masaya y Granada",
+      "latitud": 11.9228,
+      "longitud": -86.0292
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Miraflor",
+      "tipo": "reserva_natural",
+      "departamento": 5,
+      "descripcion": "Reserva en Estelí con ecosistemas de bosque seco, húmedo y nublado, rica en aves y orquídeas.",
+      "direccion": "30 km al noreste de Estelí",
+      "latitud": 13.3167,
+      "longitud": -86.2833
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Cerro Negro",
+      "tipo": "reserva_natural",
+      "departamento": 8,
+      "descripcion": "Volcán activo con paisajes desérticos. Conocido mundialmente por el sandboarding.",
+      "direccion": "20 km al este de León",
+      "latitud": 12.5067,
+      "longitud": -86.7028
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Macizos de Peñas Blancas",
+      "tipo": "reserva_natural",
+      "departamento": 12,
+      "descripcion": "Parte de la Reserva de la Biosfera Bosawás, con bosques nubosos, cascadas y biodiversidad.",
+      "direccion": "Municipio de La Dalia, Matagalpa",
+      "latitud": 13.3333,
+      "longitud": -85.8333
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Indio Maíz",
+      "tipo": "reserva_natural",
+      "departamento": 14,
+      "descripcion": "Una de las reservas más extensas de Centroamérica, con selva tropical y fauna única.",
+      "direccion": "Región sureste de Nicaragua, Río San Juan",
+      "latitud": 10.9167,
+      "longitud": -84.3167
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Cerro Kilambé",
+      "tipo": "reserva_natural",
+      "departamento": 7,
+      "descripcion": "Área protegida con paisajes montañosos, biodiversidad y producción de café orgánico.",
+      "direccion": "San Rafael del Norte, Jinotega",
+      "latitud": 13.5667,
+      "longitud": -85.9167
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Volcán Masaya",
+      "tipo": "reserva_natural",
+      "departamento": 11,
+      "descripcion": "Volcán activo con cráter accesible, miradores y cuevas de murciélagos.",
+      "direccion": "Carretera Managua-Masaya",
+      "latitud": 11.9842,
+      "longitud": -86.1611
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural El Chocoyero-El Brujo",
+      "tipo": "reserva_natural",
+      "departamento": 10,
+      "descripcion": "Refugio de vida silvestre con cascadas, hogar de chocoyos verdes y monos congo.",
+      "direccion": "20 km de Managua hacia Ticuantepe",
+      "latitud": 12.0333,
+      "longitud": -86.2833
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Pilas-El Hoyo",
+      "tipo": "reserva_natural",
+      "departamento": 8,
+      "descripcion": "Complejo volcánico con paisajes impresionantes, rutas de senderismo y laguna volcánica.",
+      "direccion": "Cerca del volcán Cerro Negro, León",
+      "latitud": 12.4333,
+      "longitud": -86.6333
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Datanlí-El Diablo",
+      "tipo": "reserva_natural",
+      "departamento": 12,
+      "descripcion": "Área protegida con bosques nubosos, cascada El Diablo y gran biodiversidad.",
+      "direccion": "Municipio de Jinotega",
+      "latitud": 13.1667,
+      "longitud": -85.9667
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Tisey-Estanzuela",
+      "tipo": "reserva_natural",
+      "departamento": 5,
+      "descripcion": "Reserva con cañones, cascada La Estanzuela, artesanías en piedra y senderos rurales.",
+      "direccion": "15 km de Estelí",
+      "latitud": 13.1167,
+      "longitud": -86.3167
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Macizo Dipilto-Jalapa",
+      "tipo": "reserva_natural",
+      "departamento": 13,
+      "descripcion": "Bosque montañoso con clima fresco, cafetales y producción artesanal.",
+      "direccion": "Dipilto, Nueva Segovia",
+      "latitud": 13.7667,
+      "longitud": -86.4167
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Cerro Apante",
+      "tipo": "reserva_natural",
+      "departamento": 12,
+      "descripcion": "Bosque nuboso con mirador panorámico sobre la ciudad de Matagalpa.",
+      "direccion": "Matagalpa",
+      "latitud": 12.9833,
+      "longitud": -85.9167
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Cerro Arenal",
+      "tipo": "reserva_natural",
+      "departamento": 5,
+      "descripcion": "Reserva con biodiversidad, nacimientos de agua y comunidad ecológica.",
+      "direccion": "San Nicolás, Estelí",
+      "latitud": 13.0833,
+      "longitud": -86.3500
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Cerro El Toro",
+      "tipo": "reserva_natural",
+      "departamento": 9,
+      "descripcion": "Bosque montañoso en Madriz, con senderos y vistas panorámicas.",
+      "direccion": "Municipio de Somoto, Madriz",
+      "latitud": 13.5667,
+      "longitud": -86.5833
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Cerro Musún",
+      "tipo": "reserva_natural",
+      "departamento": 12,
+      "descripcion": "Montaña emblemática de Matagalpa con bosques nubosos y cascadas.",
+      "direccion": "Municipio de Río Blanco, Matagalpa",
+      "latitud": 12.9167,
+      "longitud": -85.3667
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Volcán Cosigüina",
+      "tipo": "reserva_natural",
+      "departamento": 3,
+      "descripcion": "Volcán inactivo con una laguna en su cráter y miradores al Golfo de Fonseca.",
+      "direccion": "Municipio de El Viejo, Chinandega",
+      "latitud": 12.9833,
+      "longitud": -87.5667
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Laguna de Tiscapa",
+      "tipo": "reserva_natural",
+      "departamento": 10,
+      "descripcion": "Laguna volcánica en Managua, con canopy y miradores históricos.",
+      "direccion": "Centro de Managua",
+      "latitud": 12.1367,
+      "longitud": -86.2689
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Reserva Natural Cerro Saslaya",
+      "tipo": "reserva_natural",
+      "departamento": 16,
+      "descripcion": "Parte de la Reserva de la Biosfera Bosawás, con ecosistemas vírgenes y fauna silvestre.",
+      "direccion": "Región Autónoma del Caribe Norte",
+      "latitud": 14.0167,
+      "longitud": -85.4167
+    }
+  }
+
+]

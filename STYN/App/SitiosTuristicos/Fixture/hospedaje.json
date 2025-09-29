@@ -1,0 +1,222 @@
+[
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Hotel Convento San Francisco",
+      "tipo": "hospedaje",
+      "departamento": 6,
+      "descripcion": "Hotel boutique en convento histórico restaurado. Patios coloniales y ubicación privilegiada frente a museo.",
+      "direccion": "Calle El Caimito, frente al Parque Central, Granada",
+      "latitud": 11.9345,
+      "longitud": -85.9558,
+      "precio_aprox": "120.00"
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Hotel Plaza Colón",
+      "tipo": "hospedaje",
+      "departamento": 6,
+      "descripcion": "Lujo colonial en pleno parque central. Terraza con vista a la catedral y servicio cinco estrellas.",
+      "direccion": "Plaza de la Independencia, Granada",
+      "latitud": 11.9339,
+      "longitud": -85.9559,
+      "precio_aprox": "150.00"
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Hotel El Virrey",
+      "tipo": "hospedaje",
+      "departamento": 8,
+      "descripcion": "Hotel familiar en corazón de León. Patio central con fuente y proximidad a catedral y museos.",
+      "direccion": "Calle Central, León",
+      "latitud": 12.4345,
+      "longitud": -86.8782,
+      "precio_aprox": "65.00"
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Hotel La Perla",
+      "tipo": "hospedaje",
+      "departamento": 8,
+      "descripcion": "Icono leonés con arquitectura neoclásica. Restaurante reconocido y ambiente elegante.",
+      "direccion": "Avenida Central, León",
+      "latitud": 12.4342,
+      "longitud": -86.8788,
+      "precio_aprox": "85.00"
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Hotel Patio del Malinche",
+      "tipo": "hospedaje",
+      "departamento": 5,
+      "descripcion": "Encanto norteño en Estelí. Jardines interiores y proximidad a fábricas de puros.",
+      "direccion": "Barrio San Juan, Estelí",
+      "latitud": 13.0918,
+      "longitud": -86.3532,
+      "precio_aprox": "55.00"
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Hotel Los Altos",
+      "tipo": "hospedaje",
+      "departamento": 5,
+      "descripcion": "Vista panorámica de Estelí. Moderno con comodidades empresariales y restaurante gourmet.",
+      "direccion": "Loma de Los Altos, Estelí",
+      "latitud": 13.0922,
+      "longitud": -86.3538,
+      "precio_aprox": "75.00"
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Hotel Casa Naranja",
+      "tipo": "hospedaje",
+      "departamento": 11,
+      "descripcion": "Colorido hospedaje masaya. Terraza con vista al volcán y mercado de artesanías a pasos.",
+      "direccion": "Calle Calvario, Masaya",
+      "latitud": 11.9746,
+      "longitud": -86.0942,
+      "precio_aprox": "45.00"
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Hotel Ivania's",
+      "tipo": "hospedaje",
+      "departamento": 15,
+      "descripcion": "Hospitalidad familiar en San Juan del Sur. Jardín tropical y a dos cuadras de la playa.",
+      "direccion": "Avenida del Surf, San Juan del Sur",
+      "latitud": 11.2528,
+      "longitud": -86.8525,
+      "precio_aprox": "40.00"
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Pelican Eyes Resort",
+      "tipo": "hospedaje",
+      "departamento": 15,
+      "descripcion": "Lujo con vista al océano. Villas privadas, piscinas infinitas y spa de clase mundial.",
+      "direccion": "Cererto La Vista, San Juan del Sur",
+      "latitud": 11.2532,
+      "longitud": -86.8528,
+      "precio_aprox": "200.00"
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Hotel Morgan's Rock",
+      "tipo": "hospedaje",
+      "departamento": 15,
+      "descripcion": "Ecolodge de lujo en playa privada. Bungalows sobre acantilados y conservación de tortugas.",
+      "direccion": "Playa Ocotal, Rivas",
+      "latitud": 11.1489,
+      "longitud": -86.1362,
+      "precio_aprox": "300.00"
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Hotel Barceló Montelimar",
+      "tipo": "hospedaje",
+      "departamento": 10,
+      "descripcion": "Todo incluido en playa del Pacífico. Actividades familiares, golf y entretenimiento nocturno.",
+      "direccion": "Carretera a Masachapa, Managua",
+      "latitud": 11.7895,
+      "longitud": -86.4521,
+      "precio_aprox": "180.00"
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Hotel Camino Real",
+      "tipo": "hospedaje",
+      "departamento": 10,
+      "descripcion": "Negocios y lujo en capital. Centro de convenciones y proximidad a zona comercial.",
+      "direccion": "Carretera a Masaya, Managua",
+      "latitud": 12.1367,
+      "longitud": -86.2514,
+      "precio_aprox": "130.00"
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Hotel Selva Negra",
+      "tipo": "hospedaje",
+      "departamento": 12,
+      "descripcion": "Ecolodge en montañas de Matagalpa. Cabañas en bosque nuboso y tour de café orgánico.",
+      "direccion": "Kilómetro 140, Matagalpa",
+      "latitud": 12.9833,
+      "longitud": -85.9167,
+      "precio_aprox": "90.00"
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Hotel Sollentuna Hammock",
+      "tipo": "hospedaje",
+      "departamento": 6,
+      "descripcion": "Hospedaje ecológico en Ometepe. Hamacas gigantes y vista al volcán Concepción.",
+      "direccion": "Playa Santo Domingo, Isla de Ometepe",
+      "latitud": 11.5083,
+      "longitud": -85.5833,
+      "precio_aprox": "35.00"
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Hotel Charco Verde",
+      "tipo": "hospedaje",
+      "departamento": 6,
+      "descripcion": "Reserva natural en Ometepe. Cabañas frente a laguna y avistamiento de aves endémicas.",
+      "direccion": "Reserva Charco Verde, Ometepe",
+      "latitud": 11.4667,
+      "longitud": -85.5667,
+      "precio_aprox": "60.00"
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Hotel Hacienda Mérida",
+      "tipo": "hospedaje",
+      "departamento": 6,
+      "descripcion": "Hostal con historia en Ometepe. Museo petroglifos y base para escalar volcanes.",
+      "direccion": "Puerto de Mérida, Ometepe",
+      "latitud": 11.5167,
+      "longitud": -85.6167,
+      "precio_aprox": "25.00"
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Hotel Caribbean Dream",
+      "tipo": "hospedaje",
+      "departamento": 17,
+      "descripcion": "Sabor caribeño en Bluefields. Decoración criolla y música live los fines de semana.",
+      "direccion": "Barrio Punta Fría, Bluefields",
+      "latitud": 12.0169,
+      "longitud": -83.7669,
+      "precio_aprox": "50.00"
+    }
+  }]

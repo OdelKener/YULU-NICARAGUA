@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9f6bb3e4-22ab-45d7-a20b-9f1a0de069cd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Usuarios/UsuarioTuristico/GuiaTuristico/ApiView.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Usuarios/UsuarioTuristico/GuiaTuristico/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Reservas/ApiView.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/Reservas/ApiView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Reservas/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Reservas/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Usuarios/UsuarioTuristico/GuiaTuristico/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Reservas/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/Reservas/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/SitiosTuristicos/ModelViewSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/SitiosTuristicos/ModelViewSet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/SitiosTuristicos/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/SitiosTuristicos/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/SitiosTuristicos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/SitiosTuristicos/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/SitiosTuristicos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/SitiosTuristicos/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios/Auth/ApiView.py" beforeDir="false" afterPath="$PROJECT_DIR$/Usuarios/Auth/ApiView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios/Auth/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios/Auth/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios/Auth/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Usuarios/Auth/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios/UsuarioGuia/ApiView.py" beforeDir="false" afterPath="$PROJECT_DIR$/Usuarios/UsuarioGuia/ApiView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios/UsuarioGuia/ModelViewSet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Usuarios/UsuarioGuia/ModelViewSet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios/UsuarioGuia/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios/UsuarioGuia/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios/UsuarioGuia/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Usuarios/UsuarioGuia/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios/UsuarioGuia/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Usuarios/UsuarioGuia/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios/UsuarioTuristico/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios/UsuarioTuristico/migrations/0002_alter_usuarioturistico_options_usuarioturistico_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios/UsuarioTuristico/migrations/0003_alter_usuarioturistico_options_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios/UsuarioTuristico/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios/UsuarioTuristico/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Usuarios/UsuarioTuristico/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Usuarios/UsuarioTuristico/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Usuarios/UsuarioTuristico/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Usuarios/UsuarioTuristico/models.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="32Cr97QchHqk5izEodQV2FSybOd" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/ProyectoAviturismo/STYN/Usuarios/UsuarioTuristico/GuiaTuristico&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ProyectoAviturismo\STYN\Usuarios\UsuarioTuristico\GuiaTuristico" />
+      <recent name="D:\STYN\Usuarios\Auth" />
+      <recent name="D:\STYN\Usuarios\Auth " />
+      <recent name="D:\STYN\App\Reservas" />
+      <recent name="D:\STYN\App\EventosTuristicos" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ProyectoAviturismo\STYN\Usuarios\UsuarioTuristico\GuiaTuristico" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="STYN" type="Python.DjangoServer" factoryName="Django server">
+      <module name="STYN" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PY-242.21829.153" />
+        <option value="bundled-python-sdk-464836ebc622-b74155a9e76b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.21829.153" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9f6bb3e4-22ab-45d7-a20b-9f1a0de069cd" name="Changes" comment="" />
+      <created>1756935241105</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1756935241105</updated>
+      <workItem from="1756935242182" duration="477000" />
+      <workItem from="1756935765503" duration="29000" />
+      <workItem from="1756935852362" duration="856000" />
+      <workItem from="1756936733025" duration="1466000" />
+      <workItem from="1756938340288" duration="582000" />
+      <workItem from="1756939025478" duration="540000" />
+      <workItem from="1756956729539" duration="1502000" />
+      <workItem from="1757015393160" duration="2180000" />
+      <workItem from="1757017636874" duration="220000" />
+      <workItem from="1757128724318" duration="947000" />
+      <workItem from="1757130635053" duration="62000" />
+      <workItem from="1757130741035" duration="604000" />
+      <workItem from="1757131466079" duration="770000" />
+      <workItem from="1757132453951" duration="177000" />
+      <workItem from="1757132849425" duration="790000" />
+      <workItem from="1757133676349" duration="228000" />
+      <workItem from="1757133947076" duration="16000" />
+      <workItem from="1757133978280" duration="46000" />
+      <workItem from="1757134036678" duration="927000" />
+      <workItem from="1757135001611" duration="525000" />
+      <workItem from="1757135706463" duration="922000" />
+      <workItem from="1757136661290" duration="217000" />
+      <workItem from="1757136940507" duration="935000" />
+      <workItem from="1757137948248" duration="1139000" />
+      <workItem from="1757222004136" duration="456000" />
+      <workItem from="1757222581741" duration="4457000" />
+      <workItem from="1757302642283" duration="354000" />
+      <workItem from="1757310232946" duration="4227000" />
+      <workItem from="1757359695327" duration="536000" />
+      <workItem from="1757360332601" duration="264000" />
+      <workItem from="1757540541468" duration="1836000" />
+      <workItem from="1757827822134" duration="710000" />
+      <workItem from="1758211141078" duration="98000" />
+      <workItem from="1758482806719" duration="12590000" />
+      <workItem from="1758522609695" duration="310000" />
+      <workItem from="1758557109550" duration="1711000" />
+      <workItem from="1758568184808" duration="1390000" />
+      <workItem from="1758601031968" duration="6734000" />
+      <workItem from="1758683943126" duration="7000000" />
+      <workItem from="1758775704591" duration="9686000" />
+      <workItem from="1758943161991" duration="20937000" />
+      <workItem from="1758997483278" duration="1687000" />
+      <workItem from="1759012886100" duration="16136000" />
+      <workItem from="1759034806215" duration="8943000" />
+      <workItem from="1759077808819" duration="4589000" />
+      <workItem from="1759091103539" duration="2859000" />
+      <workItem from="1759106348987" duration="1575000" />
+      <workItem from="1759109681411" duration="651000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Usuarios/UsuarioTuristico/serializers.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Usuarios/UsuarioGuia/urls.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/config/settings.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Usuarios/Auth/urls.py</url>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/App/SitiosTuristicos/ModelViewSet.py</url>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

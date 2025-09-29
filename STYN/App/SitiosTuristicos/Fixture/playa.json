@@ -1,0 +1,222 @@
+[
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa Maderas",
+      "tipo": "playa",
+      "departamento": 15,
+      "descripcion": "Paraíso para surfistas con olas consistentes y ambiente bohemio. Atardeceres espectaculares.",
+      "latitud": 11.4486,
+      "longitud": -86.1333
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa Hermosa",
+      "tipo": "playa",
+      "departamento": 15,
+      "descripcion": "Playa familiar de aguas tranquilas y arena dorada. Ideal para nadar y relajarse.",
+      "latitud": 11.4167,
+      "longitud": -86.1333
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa El Coco",
+      "tipo": "playa",
+      "departamento": 15,
+      "descripcion": "Aguas cristalinas y oleaje suave. Perfecta para familias y disfrutar del sol.",
+      "latitud": 11.3833,
+      "longitud": -86.1167
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa Popoyo",
+      "tipo": "playa",
+      "departamento": 15,
+      "descripcion": "Olas poderosas para surfistas experimentados. Ambiente rústico y auténtico.",
+      "latitud": 11.2333,
+      "longitud": -86.1667
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa Marsella",
+      "tipo": "playa",
+      "departamento": 15,
+      "descripcion": "Cala privada de aguas tranquilas. Ideal para snorkeling y kayaking.",
+      "latitud": 11.2167,
+      "longitud": -86.0833
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa La Flor",
+      "tipo": "playa",
+      "departamento": 15,
+      "descripcion": "Reserva natural donde miles de tortugas desovan cada año. espectáculo único.",
+      "latitud": 11.1500,
+      "longitud": -86.1333
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa El Ostional",
+      "tipo": "playa",
+      "departamento": 15,
+      "descripcion": "Pueblo pesquero auténtico con playa virgen y olas para surf principiante.",
+      "latitud": 11.1333,
+      "longitud": -86.1667
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa Majagual",
+      "tipo": "playa",
+      "departamento": 15,
+      "descripcion": "Una de las playas más largas de San Juan del Sur. Perfecta para caminatas.",
+      "latitud": 11.2000,
+      "longitud": -86.0667
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa Remanso",
+      "tipo": "playa",
+      "departamento": 15,
+      "descripcion": "Olas consistentes y restaurantes playeros. Muy popular entre turistas.",
+      "latitud": 11.1833,
+      "longitud": -86.0833
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa El Yankee",
+      "tipo": "playa",
+      "departamento": 15,
+      "descripcion": "Playa semi-privada con oleaje moderado. Ambiente tranquilo y relajado.",
+      "latitud": 11.1667,
+      "longitud": -86.1167
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa Guasacate",
+      "tipo": "playa",
+      "departamento": 15,
+      "descripcion": "Comunidad de surfistas internacionales. Olas para todos los niveles.",
+      "latitud": 11.2667,
+      "longitud": -86.1500
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa Amarilla",
+      "tipo": "playa",
+      "departamento": 2,
+      "descripcion": "Nombre por la arena dorada. Aguas tranquilas ideales para familias.",
+      "latitud": 11.8333,
+      "longitud": -86.4500
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa Casares",
+      "tipo": "playa",
+      "departamento": 2,
+      "descripcion": "Pueblo pesquero tradicional. Perfecta para体验 auténtica cultura costeña.",
+      "latitud": 11.8000,
+      "longitud": -86.4667
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa La Boquita",
+      "tipo": "playa",
+      "departamento": 2,
+      "descripcion": "Cerca de Managua. Restaurantes de mariscos frescos y aguas tranquilas.",
+      "latitud": 11.8667,
+      "longitud": -86.4833
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa Huehuete",
+      "tipo": "playa",
+      "departamento": 3,
+      "descripcion": "Al pie del volcán Cosigüina. Aguas termales y paisaje volcánico.",
+      "latitud": 12.9833,
+      "longitud": -87.5667
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa Jiquilillo",
+      "tipo": "playa",
+      "departamento": 3,
+      "descripcion": "Comunidad de pescadores artesanales. Surf y tours de pesca disponibles.",
+      "latitud": 12.7333,
+      "longitud": -87.4333
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa Aserradores",
+      "tipo": "playa",
+      "departamento": 3,
+      "descripcion": "Olas de clase mundial. Spot conocido internacionalmente para surf.",
+      "latitud": 12.6833,
+      "longitud": -87.3833
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa Punta Ñata",
+      "tipo": "playa",
+      "departamento": 17,
+      "descripcion": "Arenas blancas y aguas turquesas del Caribe. Buceo espectacular.",
+      "latitud": 12.1667,
+      "longitud": -83.8333
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa Corn Island",
+      "tipo": "playa",
+      "departamento": 17,
+      "descripcion": "Paraíso caribeño con cultura afrodescendiente. Langosta fresca y reggae.",
+      "latitud": 12.1667,
+      "longitud": -83.0500
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Playa Little Corn Island",
+      "tipo": "playa",
+      "departamento": 17,
+      "descripcion": "Isla sin automóviles. Buceo con tiburones nodriza y aguas cristalinas.",
+      "latitud": 12.3333,
+      "longitud": -83.0000
+    }
+  }
+]

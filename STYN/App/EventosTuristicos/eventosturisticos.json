@@ -1,0 +1,102 @@
+[
+  {
+    "model": "Eventos.evento",
+    "pk": 1,
+    "fields": {
+      "nombre": "Festival de Cultura Viva",
+      "descripcion": "Muestras de música, danzas y artesanías tradicionales en espacios al aire libre.",
+      "departamento": 6,
+      "mes": 11
+
+    }
+  },
+  {
+    "model": "Eventos.evento",
+    "pk": 2,
+    "fields": {
+      "nombre": "Semana de la Gastronomía de Masaya",
+      "descripcion": "Gastronomía local, ferias de comidas típicas y recorridos culinarios.",
+      "departamento": 11,
+      "mes": 8
+    }
+  },
+  {
+    "model": "Eventos.evento",
+    "pk": 3,
+    "fields": {
+      "nombre": "Encuentro de Avistamiento de Aves Laguna de Apoyo",
+      "descripcion": "Salida guiada para observar aves migratorias y residentes alrededor de la laguna.",
+      "departamento": 11,
+      "mes": 3
+    }
+  },
+  {
+    "model": "Eventos.evento",
+    "pk": 4,
+    "fields": {
+      "nombre": "Concierto de Música Nicaragüense en León",
+      "descripcion": "Concierto al aire libre con artistas locales tradicionales y contemporáneos.",
+      "departamento": 8,
+      "mes": 7
+    }
+  },
+  {
+    "model": "Eventos.evento",
+    "pk": 5,
+    "fields": {
+      "nombre": "Tour Nocturno al Volcán Masaya",
+      "descripcion": "Visita guiada al cráter y vistas nocturnas, espectáculo de fuego volcánico.",
+      "departamento": 11,
+      "mes": 12
+  },
+  {
+    "model": "Eventos.evento",
+    "pk": 6,
+    "fields": {
+      "nombre": "Festival Internacional de Jazz Managua",
+      "descripcion": "Artistas invitados nacionales e internacionales, noche de jazz bajo las estrellas.",
+      "departamento": 10,
+      "mes": 2
+    }
+  },
+  {
+    "model": "Eventos.evento",
+    "pk": 7,
+    "fields": {
+      "nombre": "Circuito de Senderismo y Naturaleza Jinotega",
+      "descripcion": "Recorridos guiados por rutas naturales, cascadas y miradores en Jinotega.",
+      "departamento": 13,
+      "mes": 4
+    }
+  },
+  {
+    "model": "Eventos.evento",
+    "pk": 8,
+    "fields": {
+      "nombre": "Feria del Café en Estelí",
+      "descripcion": "Degustaciones, exposiciones y actividades relacionadas al café y su producción.",
+      "departamento": 5,
+      "mes": 10
+    }
+  },
+  {
+    "model": "Eventos.evento",
+    "pk": 9,
+    "fields": {
+      "nombre": "Temporada de Aves Migratorias en Río San Juan",
+      "descripcion": "Observación guiada de aves migratorias, colaboración con reservas locales.",
+      "departamento": 14,
+      "mes": 3
+    }
+  },
+  {
+    "model": "Eventos.evento",
+    "pk": 10,
+    "fields": {
+      "nombre": "Festival de Cine y Cultura Nica",
+      "descripcion": "Proyecciones de cine nacional, música local y expresión artística.",
+      "departamento": 10,
+      "mes": 5
+    }
+  }
+]

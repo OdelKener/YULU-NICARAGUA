@@ -1,0 +1,112 @@
+[
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Granada",
+      "tipo": "ciudad_patrimonial",
+      "departamento": 6,
+      "descripcion": "La Gran Sultana, joya colonial con calles coloridas, iglesias históricas y frente al lago Cocibolca. Arquitectura bien preservada y ambiente turístico vibrante.",
+      "latitud": 11.9340,
+      "longitud": -85.9560
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "León",
+      "tipo": "ciudad_patrimonial",
+      "departamento": 8,
+      "descripcion": "Ciudad universitaria y revolucionaria. Hogar de la más grande catedral de Centroamérica, museos de arte y historia, y tradición literaria.",
+      "latitud": 12.4340,
+      "longitud": -86.8784
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Masaya",
+      "tipo": "ciudad_patrimonial",
+      "departamento": 11,
+      "descripcion": "Ciudad de las flores y capital del folklore nicaragüense. Famosa por su mercado de artesanías y proximidad al volcán Masaya.",
+      "latitud": 11.9744,
+      "longitud": -86.0944
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Estelí",
+      "tipo": "ciudad_patrimonial",
+      "departamento": 5,
+      "descripcion": "Ciudad diamante en el norte de Nicaragua. Conocida por la producción de tabaco, murales revolucionarios y entorno montañoso.",
+      "latitud": 13.0916,
+      "longitud": -86.3535
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Juigalpa",
+      "tipo": "ciudad_patrimonial",
+      "departamento": 4,
+      "descripcion": "Ciudad ganadera del corazón de Chontales. Museo arqueológico con estatuas precolombinas y puerta de entrada a reservas naturales.",
+      "latitud": 12.1000,
+      "longitud": -85.3667
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Ocotal",
+      "tipo": "ciudad_patrimonial",
+      "departamento": 13,
+      "descripcion": "Ciudad fronteriza con Honduras en las montañas de Nueva Segovia. Clima fresco, producción de café y arquitectura neoclásica.",
+      "latitud": 13.6333,
+      "longitud": -86.4833
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Somoto",
+      "tipo": "ciudad_patrimonial",
+      "departamento": 9,
+      "descripcion": "Puerta de entrada al Cañón de Somoto. Ciudad fronteriza con rica historia y paisajes espectaculares de cañones fluviales.",
+      "latitud": 13.4833,
+      "longitud": -86.5833
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Rivas",
+      "tipo": "ciudad_patrimonial",
+      "departamento": 15,
+      "descripcion": "Ciudad de mangos y cruce de caminos. Conecta el Pacífico con el lago Cocibolca y es paso obligado hacia Costa Rica.",
+      "latitud": 11.4333,
+      "longitud": -85.8333
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Bluefields",
+      "tipo": "ciudad_patrimonial",
+      "departamento": 17,
+      "descripcion": "Capital de la Costa Caribe Sur. Cultura criolla-caribeña única, gastronomía afrodescendiente y puerto histórico.",
+      "latitud": 12.0167,
+      "longitud": -83.7667
+    }
+  },
+  {
+    "model": "SitiosTuristicos.sitiosturisticos",
+    "fields": {
+      "nombre": "Puerto Cabezas",
+      "tipo": "ciudad_patrimonial",
+      "departamento": 16,
+      "descripcion": "Capital de la Costa Caribe Norte. Cultura miskita vibrante, playas vírgenes y conexión con la biosfera de Bosawás.",
+      "latitud": 14.0333,
+      "longitud": -83.3833
+    }
+  }
+]

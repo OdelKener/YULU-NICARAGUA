@@ -1,0 +1,121 @@
+[
+  {
+    "model": "Departamento.departamento",
+    "pk": 1,
+    "fields": {
+      "nombre": "Boaco"
+    }
+  },
+  {
+    "model": "Departamento.departamento",
+    "pk": 2,
+    "fields": {
+      "nombre": "Carazo"
+    }
+  },
+  {
+    "model": "Departamento.departamento",
+    "pk": 3,
+    "fields": {
+      "nombre": "Chinandega"
+    }
+  },
+  {
+    "model": "Departamento.departamento",
+    "pk": 4,
+    "fields": {
+      "nombre": "Chontales"
+    }
+  },
+  {
+    "model": "Departamento.departamento",
+    "pk": 5,
+    "fields": {
+      "nombre": "Estelí"
+    }
+  },
+  {
+    "model": "Departamento.departamento",
+    "pk": 6,
+    "fields": {
+      "nombre": "Granada"
+    }
+  },
+  {
+    "model": "Departamento.departamento",
+    "pk": 7,
+    "fields": {
+      "nombre": "Jinotega"
+    }
+  },
+  {
+    "model": "Departamento.departamento",
+    "pk": 8,
+    "fields": {
+      "nombre": "León"
+    }
+  },
+  {
+    "model": "Departamento.departamento",
+    "pk": 9,
+    "fields": {
+      "nombre": "Madriz"
+    }
+  },
+  {
+    "model": "Departamento.departamento",
+    "pk": 10,
+    "fields": {
+      "nombre": "Managua"
+    }
+  },
+  {
+    "model": "Departamento.departamento",
+    "pk": 11,
+    "fields": {
+      "nombre": "Masaya"
+    }
+  },
+  {
+    "model": "Departamento.departamento",
+    "pk": 12,
+    "fields": {
+      "nombre": "Matagalpa"
+    }
+  },
+  {
+    "model": "Departamento.departamento",
+    "pk": 13,
+    "fields": {
+      "nombre": "Nueva Segovia"
+    }
+  },
+  {
+    "model": "Departamento.departamento",
+    "pk": 14,
+    "fields": {
+      "nombre": "Río San Juan"
+    }
+  },
+  {
+    "model": "Departamento.departamento",
+    "pk": 15,
+    "fields": {
+      "nombre": "Rivas"
+    }
+  },
+  {
+    "model": "Departamento.departamento",
+    "pk": 16,
+    "fields": {
+      "nombre": "Región Autónoma de la Costa Caribe Norte (RAAN)"
+    }
+  },
+  {
+    "model": "Departamento.departamento",
+    "pk": 17,
+    "fields": {
+      "nombre": "Región Autónoma de la Costa Caribe Sur (RAAS)"
+    }
+  }
+]
