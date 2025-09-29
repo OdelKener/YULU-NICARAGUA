@@ -1,56 +1,274 @@
-body {
-  background-color: #f0f2f5;
-  font-family: 'Segoe UI', sans-serif;
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
+/* Paleta de colores YULU */
+:root {
+  --verde-primario: #27ae60;
+  --verde-hover: #219150;
+  --azul-cielo: #3498db;
+  --gris-oscuro: #2c3e50;
+  --gris-medio: #34495e;
+  --gris-claro: #ecf0f1;
+  --blanco: #ffffff;
+  --sombra: rgba(0, 0, 0, 0.1);
 }
 
-form#form-registro-guia {
-  background-color: #fff;
-  padding: 2rem 3rem;
-  border-radius: 15px;
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
-  width: 500px;
+/* Reset y base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('../Image/img_loginregistro.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+
+/* Contenedor principal */
+.form-container {
+  background: var(--blanco);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+/* Header del formulario */
+.form-header {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.form-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-header p {
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+/* Cuerpo del formulario */
+.form-body {
+  padding: 2rem;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* Grid para organizar los campos */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Grupos de campos */
+.form-group {
   display: flex;
   flex-direction: column;
 }
 
-form#form-registro-guia h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #2c3e50;
+.form-group.full-width {
+  grid-column: 1 / -1;
 }
 
-form#form-registro-guia label {
-  margin-top: 0.8rem;
-  margin-bottom: 0.3rem;
-  font-weight: bold;
+/* Etiquetas */
+.form-group label {
+  font-weight: 600;
+  color: var(--gris-oscuro);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
-form#form-registro-guia input,
-form#form-registro-guia select,
-form#form-registro-guia textarea {
-  padding: 0.6rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  width: 100%;
-}
-
-form#form-registro-guia button {
-  margin-top: 1.5rem;
-  padding: 0.8rem;
-  border-radius: 8px;
-  border: none;
-  background-color: #27ae60;
-  color: #fff;
+/* Inputs, selects y textareas */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.8rem 1rem;
+  border: 2px solid #e1e8ed;
+  border-radius: 10px;
   font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.3s ease;
+  background-color: var(--gris-claro);
 }
 
-form#form-registro-guia button:hover {
-  background-color: #219150;
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--azul-cielo);
+  background-color: var(--blanco);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Input de archivo personalizado */
+.file-input-container {
+  position: relative;
+}
+
+.file-input-container input[type="file"] {
+  padding: 0.8rem;
+  border: 2px dashed #bdc3c7;
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+.file-input-container input[type="file"]::file-selector-button {
+  background: var(--azul-cielo);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.file-input-container input[type="file"]::file-selector-button:hover {
+  background: #2980b9;
+}
+
+/* Textarea */
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Input readonly (usuario) */
+.form-group input[readonly] {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Secciones del formulario */
+.form-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.section-title {
+  color: var(--gris-oscuro);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--verde-primario);
+  display: inline-block;
+}
+
+/* Botón de envío */
+.submit-container {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, var(--verde-primario), var(--verde-hover));
+  color: var(--blanco);
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .form-body {
+    padding: 1.5rem;
+    max-height: none;
+  }
+  
+  .form-header {
+    padding: 1.5rem;
+  }
+  
+  .form-header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-body {
+    padding: 1rem;
+  }
+  
+  .form-header {
+    padding: 1rem;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+/* Scroll personalizado */
+.form-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.form-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.form-body::-webkit-scrollbar-thumb {
+  background: var(--azul-cielo);
+  border-radius: 10px;
+}
+
+.form-body::-webkit-scrollbar-thumb:hover {
+  background: #2980b9;
 }
 
 

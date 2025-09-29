@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos en Nicaragua - Yulu Nicaragua</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../Css/eventos.css">
+</head>
+<body>
+    <!-- Efecto de partículas -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Hero section inmersiva -->
+    <div class="hero">
+        <div class="hero-content">
+            
+            <h1>Eventos en Nicaragua</h1>
+            <p class="subtitle">Vive la magia de nuestra cultura a través de festivales, conciertos y experiencias únicas</p>
+            <div class="breadcrumb">
+            <a href="../HTML/dashboardprincipal.html">Inicio</a>
+        
+        </div>
+        </div>
+        
+    </div>
+
+    <div class="container">
+        <div class="filters">
+            <div class="filter-group">
+                <label for="department-filter">Filtrar por departamento</label>
+                <select id="department-filter">
+                    <option value="all">Todos los departamentos</option>
+                    <option value="Granada">Granada</option>
+                    <option value="Masaya">Masaya</option>
+                    <option value="León">León</option>
+                    <option value="Managua">Managua</option>
+                    <option value="Estelí">Estelí</option>
+                    <option value="Jinotega">Jinotega</option>
+                    <option value="Río San Juan">Río San Juan</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="month-filter">Filtrar por mes</label>
+                <select id="month-filter">
+                    <option value="all">Todos los meses</option>
+                    <option value="1">Enero</option>
+                    <option value="2">Febrero</option>
+                    <option value="3">Marzo</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Mayo</option>
+                    <option value="6">Junio</option>
+                    <option value="7">Julio</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="months-nav">
+            <button class="month-btn active" data-month="all">Todos</button>
+            <button class="month-btn" data-month="2">Feb</button>
+            <button class="month-btn" data-month="3">Mar</button>
+            <button class="month-btn" data-month="4">Abr</button>
+            <button class="month-btn" data-month="5">May</button>
+            <button class="month-btn" data-month="7">Jul</button>
+            <button class="month-btn" data-month="8">Ago</button>
+            <button class="month-btn" data-month="10">Oct</button>
+            <button class="month-btn" data-month="11">Nov</button>
+            <button class="month-btn" data-month="12">Dic</button>
+        </div>
+
+        <div class="events-grid" id="events-container">
+            <!-- Los eventos se cargarán aquí dinámicamente -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Yulu Nicaragua - Todos los derechos reservados</p>
+        <p>Descubre la riqueza cultural y biodiversidad de nuestro país</p>
+    </footer>
+
+    <script>
+        // Datos de los departamentos
+        const departments = {
+            1: "Boaco",
+            2: "Carazo",
+            3: "Chinandega",
+            4: "Chontales",
+            5: "Estelí",
+            6: "Granada",
+            7: "Jinotega",
+            8: "León",
+            9: "Madriz",
+            10: "Managua",
+            11: "Masaya",
+            12: "Matagalpa",
+            13: "Nueva Segovia",
+            14: "Río San Juan",
+            15: "Rivas",
+            16: "Región Autónoma de la Costa Caribe Norte (RAAN)",
+            17: "Región Autónoma de la Costa Caribe Sur (RAAS)"
+        };
+
+        // Datos de los eventos
+        const events = [
+            {
+                id: 1,
+                nombre: "Festival de Cultura Viva",
+                descripcion: "Muestras de música, danzas y artesanías tradicionales en espacios al aire libre.",
+                departamento: 6,
+                mes: 11,
+                imagen: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 2,
+                nombre: "Semana de la Gastronomía de Masaya",
+                descripcion: "Gastronomía local, ferias de comidas típicas y recorridos culinarios.",
+                departamento: 11,
+                mes: 8,
+                imagen: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 3,
+                nombre: "Encuentro de Avistamiento de Aves Laguna de Apoyo",
+                descripcion: "Salida guiada para observar aves migratorias y residentes alrededor de la laguna.",
+                departamento: 11,
+                mes: 3,
+                imagen: "https://images.unsplash.com/photo-1551085254-e96b210db58a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 4,
+                nombre: "Concierto de Música Nicaragüense en León",
+                descripcion: "Concierto al aire libre con artistas locales tradicionales y contemporáneos.",
+                departamento: 8,
+                mes: 7,
+                imagen: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 5,
+                nombre: "Tour Nocturno al Volcán Masaya",
+                descripcion: "Visita guiada al cráter y vistas nocturnas, espectáculo de fuego volcánico.",
+                departamento: 11,
+                mes: 12,
+                imagen: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 6,
+                nombre: "Festival Internacional de Jazz Managua",
+                descripcion: "Artistas invitados nacionales e internacionales, noche de jazz bajo las estrellas.",
+                departamento: 10,
+                mes: 2,
+                imagen: "https://images.unsplash.com/photo-1415201364774-f6e0c31a3159?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 7,
+                nombre: "Circuito de Senderismo y Naturaleza Jinotega",
+                descripcion: "Recorridos guiados por rutas naturales, cascadas y miradores en Jinotega.",
+                departamento: 13,
+                mes: 4,
+                imagen: "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 8,
+                nombre: "Feria del Café en Estelí",
+                descripcion: "Degustaciones, exposiciones y actividades relacionadas al café y su producción.",
+                departamento: 5,
+                mes: 10,
+                imagen: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 9,
+                nombre: "Temporada de Aves Migratorias en Río San Juan",
+                descripcion: "Observación guiada de aves migratorias, colaboración con reservas locales.",
+                departamento: 14,
+                mes: 3,
+                imagen: "https://images.unsplash.com/photo-1420593248178-d88870618ca0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 10,
+                nombre: "Festival de Cine y Cultura Nica",
+                descripcion: "Proyecciones de cine nacional, música local y expresión artística.",
+                departamento: 10,
+                mes: 5,
+                imagen: "https://images.unsplash.com/photo-1489599809505-f2d4c65055e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            }
+        ];
+
+        // Nombres de los meses
+        const monthNames = {
+            1: "Enero",
+            2: "Febrero",
+            3: "Marzo",
+            4: "Abril",
+            5: "Mayo",
+            6: "Junio",
+            7: "Julio",
+            8: "Agosto",
+            9: "Septiembre",
+            10: "Octubre",
+            11: "Noviembre",
+            12: "Diciembre"
+        };
+
+        // Función para crear partículas
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 25;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const size = Math.random() * 12 + 3;
+                const left = Math.random() * 100;
+                const animationDuration = Math.random() * 20 + 10;
+                const animationDelay = Math.random() * 5;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${left}vw`;
+                particle.style.animationDuration = `${animationDuration}s`;
+                particle.style.animationDelay = `${animationDelay}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Función para renderizar eventos
+        function renderEvents(filteredEvents) {
+            const container = document.getElementById('events-container');
+            
+            if (filteredEvents.length === 0) {
+                container.innerHTML = `
+                    <div class="no-events">
+                        <i class="fas fa-calendar-times"></i>
+                        <h3>No se encontraron eventos</h3>
+                        <p>Intenta con otros filtros para ver más eventos.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = filteredEvents.map(event => {
+                const departmentName = departments[event.departamento];
+                const monthName = monthNames[event.mes];
+                
+                return `
+                    <div class="event-card">
+                        <div class="event-image" style="background-image: url('${event.imagen}')">
+                            <div class="event-month">${monthName}</div>
+                        </div>
+                        <div class="event-content">
+                            <h3 class="event-title">${event.nombre}</h3>
+                            <div class="event-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                ${departmentName}
+                            </div>
+                            <p class="event-description">${event.descripcion}</p>
+                            <div class="event-actions">
+                                <button class="btn btn-secondary">
+                                    <i class="far fa-calendar-plus"></i> Agendar
+                                </button>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-info-circle"></i> Más info
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Función para filtrar eventos
+        function filterEvents() {
+            const departmentFilter = document.getElementById('department-filter').value;
+            const monthFilter = document.getElementById('month-filter').value;
+            
+            const filteredEvents = events.filter(event => {
+                const departmentMatch = departmentFilter === 'all' || departments[event.departamento] === departmentFilter;
+                const monthMatch = monthFilter === 'all' || event.mes.toString() === monthFilter;
+                
+                return departmentMatch && monthMatch;
+            });
+            
+            renderEvents(filteredEvents);
+        }
+
+        // Inicializar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            // Crear partículas
+            createParticles();
+            
+            // Renderizar todos los eventos inicialmente
+            renderEvents(events);
+            
+            // Configurar event listeners para los filtros
+            document.getElementById('department-filter').addEventListener('change', filterEvents);
+            document.getElementById('month-filter').addEventListener('change', filterEvents);
+            
+            // Configurar botones de meses
+            document.querySelectorAll('.month-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remover clase active de todos los botones
+                    document.querySelectorAll('.month-btn').forEach(b => b.classList.remove('active'));
+                    
+                    // Agregar clase active al botón clickeado
+                    this.classList.add('active');
+                    
+                    // Filtrar por mes
+                    const month = this.getAttribute('data-month');
+                    if (month === 'all') {
+                        document.getElementById('month-filter').value = 'all';
+                    } else {
+                        document.getElementById('month-filter').value = month;
+                    }
+                    
+                    filterEvents();
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

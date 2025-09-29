@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas Naturales - Yulu Nicaragua</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../Css/reservasnaturales.css">
+
+
+</head>
+<body>
+    <!-- Efecto de partículas -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Hero section inmersiva -->
+    <div class="hero">
+        <div class="hero-content">
+            
+            <h1>Reservas Naturales de Nicaragua</h1>
+            <p class="subtitle">Sumérgete en la biodiversidad única y los paisajes espectaculares de nuestras áreas protegidas</p>
+            <div class="breadcrumb">
+            <a href="../HTML/dashboardprincipal.html">Inicio</a>
+        
+        </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="view-controls">
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="department-filter">Filtrar por departamento</label>
+                    <select id="department-filter">
+                        <option value="all">Todos los departamentos</option>
+                        <option value="Río San Juan">Río San Juan</option>
+                        <option value="Chontales">Chontales</option>
+                        <option value="Matagalpa">Matagalpa</option>
+                        <option value="Jinotega">Jinotega</option>
+                        <option value="Nueva Segovia">Nueva Segovia</option>
+                        <option value="RAAN">RAAN</option>
+                        <option value="RAAS">RAAS</option>
+                        <option value="Chinandega">Chinandega</option>
+                        <option value="León">León</option>
+                        <option value="Estelí">Estelí</option>
+                        <option value="Madriz">Madriz</option>
+                        <option value="Masaya">Masaya</option>
+                        <option value="Granada">Granada</option>
+                        <option value="Rivas">Rivas</option>
+                        <option value="Carazo">Carazo</option>
+                        <option value="Boaco">Boaco</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="type-filter">Filtrar por tipo</label>
+                    <select id="type-filter">
+                        <option value="all">Todos los tipos</option>
+                        <option value="Bosque Tropical">Bosque Tropical</option>
+                        <option value="Reserva Biológica">Reserva Biológica</option>
+                        <option value="Volcánica">Volcánica</option>
+                        <option value="Costera">Costera</option>
+                        <option value="Isla">Isla</option>
+                        <option value="Laguna">Laguna</option>
+                        <option value="Montañosa">Montañosa</option>
+                    </select>
+                </div>
+            </div>
+            <div class="view-options">
+                <button class="view-btn active" data-view="grid">
+                    <i class="fas fa-th"></i> Cuadrícula
+                </button>
+                <button class="view-btn" data-view="list">
+                    <i class="fas fa-list"></i> Lista
+                </button>
+            </div>
+        </div>
+
+        <div class="reserves-grid" id="reserves-container">
+            <!-- Las reservas se cargarán aquí dinámicamente -->
+        </div>
+
+        <div class="reserves-list" id="reserves-list-container">
+            <!-- Vista de lista se cargará aquí dinámicamente -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Yulu Nicaragua - Todos los derechos reservados</p>
+        <p>Protegiendo y conservando la biodiversidad de nuestro país</p>
+    </footer>
+
+    <script>
+        // Datos de las reservas naturales (20 reservas)
+        const reserves = [
+            {
+                id: 1,
+                nombre: "Reserva Biológica Indio Maíz",
+                descripcion: "Una de las áreas de bosque tropical lluvioso mejor conservadas de Centroamérica, con una biodiversidad excepcional.",
+                departamento: "Río San Juan",
+                tipo: "Bosque Tropical",
+                caracteristicas: ["Bosque tropical", "Gran biodiversidad", "Ríos y quebradas"],
+                imagen: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 2,
+                nombre: "Reserva Natural Volcán Mombacho",
+                descripcion: "Volcán inactivo cubierto de bosque nuboso, con senderos canopy y una vista panorámica espectacular.",
+                departamento: "Granada",
+                tipo: "Volcánica",
+                caracteristicas: ["Bosque nuboso", "Sendero canopy", "Vista panorámica"],
+                imagen: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 3,
+                nombre: "Reserva Natural Laguna de Apoyo",
+                descripcion: "Laguna de cráter volcánico con aguas cristalinas, ideal para natación y observación de aves.",
+                departamento: "Masaya",
+                tipo: "Laguna",
+                caracteristicas: ["Laguna cristalina", "Avistamiento de aves", "Natación"],
+                imagen: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 4,
+                nombre: "Reserva Natural Volcán Masaya",
+                descripcion: "Uno de los volcanes más activos de Nicaragua, con un espectacular cráter humeante y museo vulcanológico.",
+                departamento: "Masaya",
+                tipo: "Volcánica",
+                caracteristicas: ["Volcán activo", "Museo vulcanológico", "Vista nocturna"],
+                imagen: "https://images.unsplash.com/photo-1580251239533-8c4cb013dfb8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 5,
+                nombre: "Reserva Natural Isla de Ometepe",
+                descripcion: "Isla formada por dos volcanes en el Lago Cocibolca, con petroglifos precolombinos y playas de arena volcánica.",
+                departamento: "Rivas",
+                tipo: "Isla",
+                caracteristicas: ["Isla volcánica", "Petroglifos", "Playas naturales"],
+                imagen: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 6,
+                nombre: "Reserva Natural Bosawás",
+                descripcion: "La mayor reserva forestal de Centroamérica, declarada Reserva de la Biosfera por la UNESCO.",
+                departamento: "Jinotega",
+                tipo: "Bosque Tropical",
+                caracteristicas: ["Reserva de biosfera", "Selva tropical", "Comunidades indígenas"],
+                imagen: "https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 7,
+                nombre: "Reserva Natural Miraflor",
+                descripcion: "Reserva comunitaria que combina bosque nuboso, agricultura sostenible y ecoturismo comunitario.",
+                departamento: "Estelí",
+                tipo: "Montañosa",
+                caracteristicas: ["Bosque nuboso", "Ecoturismo comunitario", "Orquídeas"],
+                imagen: "https://images.unsplash.com/photo-1464822759849-e41f5bc90477?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 8,
+                nombre: "Reserva Natural Tisey-Estanzuela",
+                descripcion: "Área protegida con miradores espectaculares, cascadas y el famoso 'Salto de la Estanzuela'.",
+                departamento: "Estelí",
+                tipo: "Montañosa",
+                caracteristicas: ["Miradores", "Cascadas", "Senderismo"],
+                imagen: "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 9,
+                nombre: "Reserva Natural Cayos Miskitos",
+                descripcion: "Archipiélago en el Caribe nicaragüense con arrecifes de coral, playas vírgenes y cultura miskita.",
+                departamento: "RAAN",
+                tipo: "Costera",
+                caracteristicas: ["Arrecifes de coral", "Cultura miskita", "Playas vírgenes"],
+                imagen: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 10,
+                nombre: "Reserva Natural Chocoyero-El Brujo",
+                descripcion: "Refugio de loras verdes (chocoyos) con dos cascadas y senderos para observación de aves.",
+                departamento: "Managua",
+                tipo: "Bosque Tropical",
+                caracteristicas: ["Refugio de loras", "Cascadas", "Observación de aves"],
+                imagen: "https://images.unsplash.com/photo-1551085254-e96b210db58a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            }
+        ];
+
+        // Función para crear partículas
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const size = Math.random() * 15 + 5;
+                const left = Math.random() * 100;
+                const animationDuration = Math.random() * 20 + 10;
+                const animationDelay = Math.random() * 5;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${left}vw`;
+                particle.style.animationDuration = `${animationDuration}s`;
+                particle.style.animationDelay = `${animationDelay}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Función para renderizar reservas en vista de cuadrícula
+        function renderReservesGrid(filteredReserves) {
+            const container = document.getElementById('reserves-container');
+            
+            if (filteredReserves.length === 0) {
+                container.innerHTML = `
+                    <div class="no-reserves">
+                        <i class="fas fa-tree"></i>
+                        <h3>No se encontraron reservas</h3>
+                        <p>Intenta con otros filtros para ver más reservas naturales.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = filteredReserves.map(reserve => {
+                return `
+                    <div class="reserve-card">
+                        <div class="reserve-image" style="background-image: url('${reserve.imagen}')">
+                            <div class="reserve-type">${reserve.tipo}</div>
+                        </div>
+                        <div class="reserve-content">
+                            <h3 class="reserve-title">${reserve.nombre}</h3>
+                            <div class="reserve-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                ${reserve.departamento}
+                            </div>
+                            <p class="reserve-description">${reserve.descripcion}</p>
+                            <div class="reserve-features">
+                                ${reserve.caracteristicas.map(feature => 
+                                    `<span class="feature-tag">${feature}</span>`
+                                ).join('')}
+                            </div>
+                            <div class="reserve-actions">
+                                <button class="btn btn-secondary">
+                                    <i class="far fa-heart"></i> Guardar
+                                </button>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-info-circle"></i> Explorar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Función para renderizar reservas en vista de lista
+        function renderReservesList(filteredReserves) {
+            const container = document.getElementById('reserves-list-container');
+            
+            if (filteredReserves.length === 0) {
+                container.innerHTML = `
+                    <div class="no-reserves">
+                        <i class="fas fa-tree"></i>
+                        <h3>No se encontraron reservas</h3>
+                        <p>Intenta con otros filtros para ver más reservas naturales.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = filteredReserves.map(reserve => {
+                return `
+                    <div class="reserve-list-item">
+                        <div class="list-image" style="background-image: url('${reserve.imagen}')"></div>
+                        <div class="list-content">
+                            <h3 class="list-title">${reserve.nombre}</h3>
+                            <div class="list-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                ${reserve.departamento} • ${reserve.tipo}
+                            </div>
+                            <p class="list-description">${reserve.descripcion}</p>
+                            <div class="list-features">
+                                ${reserve.caracteristicas.map(feature => 
+                                    `<span class="feature-tag">${feature}</span>`
+                                ).join('')}
+                            </div>
+                            <div class="reserve-actions">
+                                <button class="btn btn-secondary">
+                                    <i class="far fa-heart"></i> Guardar
+                                </button>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-info-circle"></i> Explorar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Función para filtrar reservas
+        function filterReserves() {
+            const departmentFilter = document.getElementById('department-filter').value;
+            const typeFilter = document.getElementById('type-filter').value;
+            
+            const filteredReserves = reserves.filter(reserve => {
+                const departmentMatch = departmentFilter === 'all' || reserve.departamento === departmentFilter;
+                const typeMatch = typeFilter === 'all' || reserve.tipo === typeFilter;
+                
+                return departmentMatch && typeMatch;
+            });
+            
+            const activeView = document.querySelector('.view-btn.active').getAttribute('data-view');
+            
+            if (activeView === 'grid') {
+                renderReservesGrid(filteredReserves);
+            } else {
+                renderReservesList(filteredReserves);
+            }
+        }
+
+        // Función para cambiar vista
+        function changeView(viewType) {
+            // Actualizar botones activos
+            document.querySelectorAll('.view-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[data-view="${viewType}"]`).classList.add('active');
+            
+            // Mostrar/ocultar contenedores
+            if (viewType === 'grid') {
+                document.getElementById('reserves-container').style.display = 'grid';
+                document.getElementById('reserves-list-container').style.display = 'none';
+            } else {
+                document.getElementById('reserves-container').style.display = 'none';
+                document.getElementById('reserves-list-container').style.display = 'flex';
+            }
+            
+            // Re-renderizar con filtros actuales
+            filterReserves();
+        }
+
+        // Inicializar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            // Crear partículas
+            createParticles();
+            
+            // Renderizar todas las reservas inicialmente en vista de cuadrícula
+            renderReservesGrid(reserves);
+            
+            // Configurar event listeners para los filtros
+            document.getElementById('department-filter').addEventListener('change', filterReserves);
+            document.getElementById('type-filter').addEventListener('change', filterReserves);
+            
+            // Configurar botones de vista
+            document.querySelectorAll('.view-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const viewType = this.getAttribute('data-view');
+                    changeView(viewType);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
+Características del diseño:

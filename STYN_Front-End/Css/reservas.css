@@ -1,51 +1,331 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
+/* Paleta de colores YULU */
+:root {
+  --azul-primario: #005f73;
+  --azul-secundario: #0a9396;
+  --azul-hover: #00747a;
+  --verde-acento: #27ae60;
+  --naranja-acento: #e67e22;
+  --gris-oscuro: #2c3e50;
+  --gris-medio: #34495e;
+  --gris-claro: #ecf0f1;
+  --blanco: #ffffff;
+  --sombra: rgba(0, 0, 0, 0.1);
+  --borde: #e1e8ed;
+}
+
+/* Reset y base */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
-  background-color: #005f73;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-
-main {
-  max-width: 600px;
-  margin: 2rem auto;
-  background: #fff;
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-form label {
-  display: block;
-  margin-top: 1rem;
-  font-weight: bold;
+/* Header moderno */
+header {
+  background: linear-gradient(135deg, var(--azul-primario), var(--azul-secundario));
+  color: var(--blanco);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0 10px 30px rgba(0, 95, 115, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
-form input,
-form select,
-form textarea,
-form button {
-  width: 100%;
-  padding: .5rem;
-  margin-top: .5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--verde-acento), var(--naranja-acento));
 }
 
-form button {
-  background-color: #0a9396;
-  color: white;
-  font-weight: bold;
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+/* Contenedor principal */
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  background: var(--blanco);
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Formulario */
+#formReserva {
+  padding: 2.5rem;
+}
+
+/* Grid para organización */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Etiquetas */
+.form-group label {
+  font-weight: 600;
+  color: var(--gris-oscuro);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.form-group label::before {
+  content: '•';
+  color: var(--azul-secundario);
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Inputs, selects y textareas */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--borde);
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: var(--gris-claro);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--azul-secundario);
+  background-color: var(--blanco);
+  box-shadow: 0 0 0 3px rgba(10, 147, 150, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Textarea específico */
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+/* Grupo de fecha y hora */
+.datetime-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Información de precio dinámico */
+.price-info {
+  background: linear-gradient(135deg, var(--gris-claro), #f8f9fa);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--verde-acento);
+  margin-bottom: 1.5rem;
+}
+
+.price-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.price-label {
+  font-weight: 600;
+  color: var(--gris-oscuro);
+}
+
+.price-amount {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--verde-acento);
+}
+
+.price-note {
+  font-size: 0.8rem;
+  color: var(--gris-medio);
+  opacity: 0.8;
+}
+
+/* Botón de reserva */
+.submit-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.reserve-btn {
+  background: linear-gradient(135deg, var(--verde-acento), #219150);
+  color: var(--blanco);
+  padding: 1.2rem 3rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
-  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
-form button:hover {
-  background-color: #00747a;
+.reserve-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.reserve-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
+}
+
+.reserve-btn:hover::before {
+  left: 100%;
+}
+
+.reserve-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Estados de carga */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '...';
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0%, 33% { content: '.'; }
+  34%, 66% { content: '..'; }
+  67%, 100% { content: '...'; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .datetime-group {
+    grid-template-columns: 1fr;
+  }
+  
+  #formReserva {
+    padding: 1.5rem;
+  }
+  
+  header {
+    padding: 1.5rem;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #formReserva {
+    padding: 1rem;
+  }
+  
+  header {
+    padding: 1rem;
+  }
+  
+  .reserve-btn {
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .price-display {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-group {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Scroll personalizado */
+#formReserva {
+  scrollbar-width: thin;
+  scrollbar-color: var(--azul-secundario) var(--gris-claro);
+}
+
+#formReserva::-webkit-scrollbar {
+  width: 6px;
+}
+
+#formReserva::-webkit-scrollbar-track {
+  background: var(--gris-claro);
+  border-radius: 10px;
+}
+
+#formReserva::-webkit-scrollbar-thumb {
+  background: var(--azul-secundario);
+  border-radius: 10px;
+}
+
+#formReserva::-webkit-scrollbar-thumb:hover {
+  background: var(--azul-primario);
 }

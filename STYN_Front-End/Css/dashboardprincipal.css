@@ -1,3 +1,13 @@
+/* Paleta de colores */
+:root {
+  --gris-oscuro: #222222;
+  --gris-suave: #B0BEC5;
+  --blanco: #FFFFFF;
+  --azul-cielo: #0288D1;
+  --verde-bosque: #2E7D32;
+  --negro: #000000;
+}
+
 /* Reset básico */
 * {
   margin: 0;
@@ -7,47 +17,196 @@
 }
 
 body {
-  background-color: #f0f2f5;
+  background-color: var(--gris-suave);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* Header */
 header {
-  background-color: #2c3e50;
-  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(#2E7D32);
+  color: var(#2E7D32);
   padding: 1rem 2rem;
-  text-align: center;
+  border-bottom: 4px solid var(--verde-bosque);
 }
 
-header h1 {
+.header-logo img {
+  height: 60px;
+  width: auto;
+  margin-right: 20px;
+  object-fit: contain;
+}
+
+.header-text h1 {
   font-size: 2rem;
+  font-weight: bold;
 }
 
+.slogan {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(#000000);
+}
+
+/* Grid de módulos */
 main.menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   padding: 2rem;
+  margin-bottom: 2rem;
 }
 
+/* Bloques flotantes */
 .menu-item {
-  background-color: #3498db;
-  color: #fff;
+  background-color: var(--azul-cielo);
+  color: var(--blanco);
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   cursor: pointer;
   font-size: 1.2rem;
-  transition: transform 0.2s, box-shadow 0.2s;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px #2E7D32;
+  min-height: 120px;
 }
 
 .menu-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px #2E7D32;
+  background-color: var(--verde-bosque);
 }
+
+/* Sección del Video - FULLSCREEN */
+.video-section {
+  width: 100%;
+  background-color: var(--negro);
+  position: relative;
+  overflow: hidden;
+}
+
+.video-container {
+  width: 100%;
+  height: 70vh; /* Ocupa 70% del viewport height */
+  position: relative;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+}
+
+.video-title {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--blanco);
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 10;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  background: linear-gradient(transparent, rgba(0,0,0,0.5));
+  padding: 1rem;
+}
+
+/* Overlay para mejor legibilidad */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.3) 0%,
+    rgba(0,0,0,0.1) 20%,
+    rgba(0,0,0,0.1) 80%,
+    rgba(0,0,0,0.3) 100%
+  );
+  z-index: 5;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .header-logo img {
+    height: 50px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .header-text h1 {
+    font-size: 1.5rem;
+  }
+  
+  .slogan {
+    font-size: 0.85rem;
+  }
+  
+  main.menu-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .menu-item {
+    font-size: 1rem;
+    padding: 1.5rem;
+    min-height: 100px;
+  }
+  
+  .video-container {
+    height: 50vh; /* Un poco menos alto en móviles */
+  }
+  
+  .video-title {
+    font-size: 1.2rem;
+    top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-text h1 {
+    font-size: 1.3rem;
+  }
+  
+  main.menu-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .video-container {
+    height: 40vh;
+  }
+  
+  .video-title {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Para pantallas muy grandes */
+@media (min-width: 1200px) {
+  .video-container {
+    height: 80vh;
+  }
+}
+
 
 

@@ -3,14 +3,13 @@ const BASE_URL = "http://127.0.0.1:8000/";
 
 // Función genérica POST
 async function post(endpoint, data) {
-  const url = BASE_URL + endpoint; // concatena base + endpoint
+  const url = BASE_URL + endpoint;
   const res = await fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
   });
 
-  // Manejo de errores HTTP
   if (!res.ok) {
     const errorData = await res.json().catch(() => ({}));
     throw new Error(`HTTP ${res.status}: ${JSON.stringify(errorData)}`);
@@ -22,7 +21,6 @@ async function post(endpoint, data) {
 // --- Registro de usuario ---
 async function registerUser(formData) {
   try {
-    // endpoint relativo al BASE_URL, siempre con slash final
     const data = await post("Usuarios/Auth/registro/", formData);
 
     if (data.user) {
@@ -36,16 +34,8 @@ async function registerUser(formData) {
   }
 }
 
-// --- Login de usuario ---
-// JS/auth.js
-
-async function loginUser(event) {
-  event.preventDefault();
-
-  const form = document.getElementById("form-login");
-  const email = form.email.value;
-  const password = form.password.value;
-
+// --- Login de usuario CORREGIDO ---
+async function loginUser(email, password) {
   try {
     const res = await fetch("http://127.0.0.1:8000/Usuarios/Auth/login/", {
       method: "POST",
@@ -70,30 +60,25 @@ async function loginUser(event) {
   }
 }
 
-// Evento al cargar la página
+// --- Solo UN event listener para el login ---
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("form-login");
-  if (form) form.addEventListener("submit", loginUser);
-});
-
-// --- Formulario de login ---
-document.addEventListener("DOMContentLoaded", () => {
-  const loginForm = document.getElementById("form-login");
+  // Login form
+  const loginForm = document.getElementById("loginForm");
   if (loginForm) {
     loginForm.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const email = loginForm.email.value;
-      const password = loginForm.password.value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
       await loginUser(email, password);
     });
   }
 
+  // Registro form (si lo necesitas)
   const registroForm = document.getElementById("form-registro-guia");
   if (registroForm) {
     registroForm.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      // Creamos formData desde inputs del formulario
       const formDataObj = {};
       new FormData(registroForm).forEach((value, key) => {
         formDataObj[key] = value;

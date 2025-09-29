@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Nicaragüense - Módulo de Aprendizaje</title>
+    <link rel="stylesheet" href="../Css/educacion.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="culture-hero">
+        <h1>Cultura Nicaragüense</h1>
+        <p>Descubre nuestras tradiciones, gastronomía y bailes típicos</p>
+        <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-menu">
+                <a href="../HTML/dashboardprincipal.html" class="nav-link">Inicio</a>
+                <a  class="nav-link">Cultura</a>
+            </div>
+        </div>
+    </nav>
+    </section>
+
+    <!-- Sección de Tradiciones -->
+    <section class="culture-section">
+        <div class="culture-card">
+            <h2>🎭 Tradiciones y Festividades</h2>
+            <p>Nicaragua es un país rico en tradiciones culturales que reflejan su historia y diversidad.</p>
+            
+            <div class="culture-grid">
+                <div class="culture-item" data-modal="purisima">
+                    <h3>La Purísima</h3>
+                    <p>Celebración religiosa en honor a la Virgen María...</p>
+                    <button class="info-btn">Más Información</button>
+                </div>
+                <div class="culture-item" data-modal="gueguense">
+                    <h3>Güegüense</h3>
+                    <p>Obra teatral declarada Patrimonio Cultural...</p>
+                    <button class="info-btn">Más Información</button>
+                </div>
+                <div class="culture-item" data-modal="fiestas">
+                    <h3>Fiestas Patronales</h3>
+                    <p>Cada ciudad celebra a su santo patrón...</p>
+                    <button class="info-btn">Más Información</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Bailes Típicos -->
+    <section class="culture-section">
+        <div class="culture-card">
+            <h2>💃 Bailes Típicos</h2>
+            <p>La danza nicaragüense expresa la alegría y el folclor de nuestro pueblo.</p>
+            
+            <div class="culture-grid">
+                <div class="culture-item" data-modal="baile-gueguense">
+                    <h3>Baile del Güegüense</h3>
+                    <p>Danza satírica que combina elementos indígenas...</p>
+                    <button class="info-btn">Más Información</button>
+                </div>
+                <div class="culture-item" data-modal="palo-mayo">
+                    <h3>Palo de Mayo</h3>
+                    <p>Baile afrocaribeño lleno de energía y color...</p>
+                    <button class="info-btn">Más Información</button>
+                </div>
+                <div class="culture-item" data-modal="inditas">
+                    <h3>Baile de las Inditas</h3>
+                    <p>Danza que representa las labores cotidianas...</p>
+                    <button class="info-btn">Más Información</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Gastronomía -->
+    <section class="culture-section">
+        <div class="culture-card">
+            <h2>🍲 Gastronomía Nicaragüense</h2>
+            <p>Sabores únicos que combinan ingredientes precolombinos con influencias españolas.</p>
+            
+            <div class="food-grid">
+                <div class="food-item" data-modal="gallo-pinto">
+                    <h3>Gallo Pinto</h3>
+                    <p>Arroz y frijoles revueltos, el desayuno nacional...</p>
+                    <button class="info-btn">Más Información</button>
+                </div>
+                <div class="food-item" data-modal="nacatamal">
+                    <h3>Nacatamal</h3>
+                    <p>Masa de maíz rellena con carne, envuelta en hojas...</p>
+                    <button class="info-btn">Más Información</button>
+                </div>
+                <div class="food-item" data-modal="vigoron">
+                    <h3>Vigorón</h3>
+                    <p>Yuca con chicharrón y ensalada de repollo...</p>
+                    <button class="info-btn">Más Información</button>
+                </div>
+                <div class="food-item" data-modal="quesillo">
+                    <h3>Quesillo</h3>
+                    <p>Tortilla con queso, cebolla y crema, típico...</p>
+                    <button class="info-btn">Más Información</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para Cultura -->
+    <div id="cultureModal" class="modal-culture">
+        <div class="modal-culture-content">
+            <span class="close-culture-modal">&times;</span>
+            <div class="modal-culture-body">
+                <div class="modal-culture-text">
+                    <h2 id="modal-culture-title">Título</h2>
+                    <p id="modal-culture-description">Descripción breve...</p>
+                    <div class="modal-culture-details">
+                        <h4>Información Detallada</h4>
+                        <p id="modal-culture-fullinfo">Información completa...</p>
+                    </div>
+                    <div class="modal-culture-extra">
+                        <h4>Datos Curiosos</h4>
+                        <p id="modal-culture-curiosities">Datos interesantes...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón de regreso -->
+    <div class="culture-section" style="text-align: center;">
+        <a href="../HTML/dashboardprincipal.html" class="back-button">← Volver al Inicio</a>
+    </div>
+
+    <script src="../JS/educacion.js"></script>
+</body>
+</html>

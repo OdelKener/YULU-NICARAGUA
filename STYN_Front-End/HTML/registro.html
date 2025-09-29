@@ -2,24 +2,63 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro - YULU NICARAGUA</title>
   <link rel="stylesheet" href="../Css/diseniologin_registro.css">
 </head>
 <body>
-  <div class="container">
-    <h2>Registro Usuario Turístico</h2>
-    <form id="registerForm">
-      <input type="text" name="username" placeholder="Usuario" required>
-      <input type="email" name="email" placeholder="Correo" required>
-      <input type="text" name="first_name" placeholder="Nombre" required>
-      <input type="text" name="last_name" placeholder="Apellido" required>
-      <input type="password" name="password" placeholder="Contraseña" required>
-      <input type="password" name="password_confirm" placeholder="Confirmar contraseña" required>
-      <input type="text" name="telefono" placeholder="Teléfono">
-      <input type="hidden" name="tipo_usuario" value="turista">
-      <button type="submit">Registrarme</button>
-    </form>
-    <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+  <div class="login-container">
+    <div class="login-frame">
+      <!-- Logo y Título -->
+      <div class="logo-section">
+        <img src="../Image/logo_YULUNICARAGUA2.png" alt="Logo Yulu Nicaragua" class="logo">
+        <h1>YULU NICARAGUA</h1>
+        <p class="slogan">"Descubre la riqueza cultural y biodiversidad"</p>
+      </div>
+
+      <!-- Formulario de Registro -->
+      <form id="registerForm" class="login-form">
+        <h2>Crear Cuenta</h2>
+        
+        <div class="input-group">
+          <input type="text" name="username" placeholder="Usuario" required>
+        </div>
+        
+        <div class="input-group">
+          <input type="email" name="email" placeholder="Correo electrónico" required>
+        </div>
+
+        <div class="input-row">
+          <div class="input-group half">
+            <input type="text" name="first_name" placeholder="Nombre" required>
+          </div>
+          <div class="input-group half">
+            <input type="text" name="last_name" placeholder="Apellido" required>
+          </div>
+        </div>
+        
+        <div class="input-row">
+          <div class="input-group half">
+            <input type="password" name="password" placeholder="Contraseña" required>
+          </div>
+          <div class="input-group half">
+            <input type="password" name="password_confirm" placeholder="Confirmar contraseña" required>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <input type="text" name="telefono" placeholder="Teléfono (opcional)">
+        </div>
+
+        <input type="hidden" name="tipo_usuario" value="turista">
+
+        <button type="submit" class="login-btn">Registrarme</button>
+
+        <div class="register-link">
+          <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+        </div>
+      </form>
+    </div>
   </div>
 
   <script src="../JS/api.js"></script>
@@ -28,6 +67,13 @@
     document.getElementById("registerForm").addEventListener("submit", (e) => {
       e.preventDefault();
       const formData = Object.fromEntries(new FormData(e.target));
+      
+      // Validación de contraseñas
+      if (formData.password !== formData.password_confirm) {
+        alert('Las contraseñas no coinciden');
+        return;
+      }
+      
       registerUser(formData);
     });
   </script>

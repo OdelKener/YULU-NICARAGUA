@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitios Turísticos - Yulu Nicaragua</title>
+  <link rel="stylesheet" href="../Css/sitiosturistico.css">
+</head>
+<body>
+  <!-- Efecto de partículas -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Hero section inmersiva -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Vive Nicaragua</h1>
+      <p>Siente el latido de nuestra tierra a través de cada experiencia</p>
+      <div class="breadcrumb">
+            <a href="../HTML/dashboardprincipal.html">Inicio</a>
+        
+        </div>
+    </div>
+  </div>
+
+  <!-- Sección de información -->
+  <div class="info-section">
+    <div class="info-block">
+      <h2>Biodiversidad Única</h2>
+      <p>
+        Nicaragua es un paraíso natural con volcanes activos, lagos cristalinos, 
+        selvas tropicales y playas vírgenes. Descubre ecosistemas que albergan 
+        especies únicas en el mundo.
+      </p>
+    </div>
+    <div class="info-block">
+      <h2>Cultura Viva</h2>
+      <p>
+        Nuestra herencia indígena y colonial se fusiona en festividades coloridas, 
+        música tradicional y arte popular. Cada rincón cuenta una historia de 
+        resistencia y alegría.
+      </p>
+    </div>
+    <div class="info-block">
+      <h2>Sabores Auténticos</h2>
+      <p>
+        Desde el gallo pinto al amanecer hasta el nacatamal en domingos familiares, 
+        nuestra gastronomía es un viaje sensorial que refleja la diversidad cultural 
+        del país.
+      </p>
+    </div>
+  </div>
+
+  <!-- Sección cultural con espacio para tu contenido -->
+  <section class="cultural-section">
+    <div class="cultural-content">
+      <div class="cultural-text">
+        <h2>La Esencia del Pueblo Nica</h2>
+        <p>
+          <!-- ESPACIO PARA TU TEXTO SOBRE CULTURA NICARAGÜENSE -->
+          Las tradiciones de Nicaragua son el reflejo más auténtico de su alma colectiva: una fusión vibrante de herencias indígenas, expresiones coloniales y creencias populares que han resistido el paso del tiempo. Desde los rituales religiosos hasta las celebraciones populares, cada tradición encarna siglos de historia, identidad y resistencia cultural.
+          En este país centroamericano donde conviven más de 15 pueblos indígenas, las costumbres ancestrales como las del pueblo chorotega o misquito siguen vivas a través de danzas, lenguas y ceremonias comunitarias. Al mismo tiempo, las festividades católicas —como La Gritería, La Purísima o la Semana Santa en León y Granada— transforman las calles en escenarios de fervor, música de filarmónicas, altares coloridos y devoción colectiva.
+
+        </p>
+        <p>
+          <!-- MÁS ESPACIO PARA TU CONTENIDO -->
+          No se puede hablar de las tradiciones nicaragüenses sin mencionar el icónico baile de El Güegüense, una joya del teatro popular declarada Patrimonio Oral e Intangible de la Humanidad por la UNESCO. Tampoco pueden faltar las fiestas patronales con sus “toros encuetados”, las procesiones a pie descalzo en honor a santos como San Sebastián en Diriamba, o las comidas tradicionales como el nacatamal, la chicha de maíz, o el vaho que se preparan en fechas específicas y celebraciones familiares.
+          Las expresiones culturales de Nicaragua no se limitan a los eventos festivos: también se manifiestan en la forma en que se transmite el conocimiento oral, en la artesanía local (como las hamacas de Masaya o la cerámica negra de San Juan de Oriente), y en la música folclórica acompañada de marimbas y guitarras.
+
+        </p>
+      </div>
+      <div class="cultural-image">
+        <img src="../Image/gueguense2.png" 
+             alt="Cultura Nicaragüense">
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería de imágenes -->
+  <section class="gallery-section">
+    <h2 class="gallery-title">Rincones que Roban el Aliento</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="../Image/playaamarilla.jpg" 
+             alt="Playa Amarilla">
+        <div class="gallery-caption">
+          <h3>Playa Amarilla</h3>
+          <p>Aguas cristalinas y hermosas con una vista al mar maravillosa</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="../Image/Cathedral-Rivas.jpg" 
+             alt="Ciudad de Rivas">
+        <div class="gallery-caption">
+          <h3>Ciudad de Rivas</h3>
+          <p>Bella catedral de la ciudad de Rivas</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="../Image/hotel.webp" 
+             alt="Paraiso Beach Hotel">
+        <div class="gallery-caption">
+          <h3>Paraiso Beach Hotel</h3>
+          <p>Un paraiso en la tierra</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mapa interactivo - TU MAPA INTEGRADO -->
+  <div class="map-card">
+    <div class="map-header">
+      <span>🎯 Mapa Interactivo de Sitios Turísticos</span>
+      <button id="toggleMap">🌍 Pantalla Completa</button>
+    </div>
+    <div class="map-wrapper" id="mapWrapper">
+      <iframe 
+        src="https://www.google.com/maps/d/embed?mid=1t_Z4jSau4MWcp0NvWBl69vcmV6Kakmo&ehbc=2E312F"
+        allowfullscreen="" 
+        loading="lazy"
+        title="Mapa de Sitios Turísticos de Nicaragua">
+      </iframe>
+    </div>
+  </div>
+
+  <script>
+    // Efecto de partículas
+    function createParticles() {
+      const particlesContainer = document.getElementById('particles');
+      const particleCount = 50;
+      
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        // Posición y tamaño aleatorio
+        const size = Math.random() * 10 + 5;
+        const left = Math.random() * 100;
+        const animationDuration = Math.random() * 20 + 10;
+        const animationDelay = Math.random() * 5;
+        
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${left}vw`;
+        particle.style.animationDuration = `${animationDuration}s`;
+        particle.style.animationDelay = `${animationDelay}s`;
+        
+        particlesContainer.appendChild(particle);
+      }
+    }
+
+    // Toggle del mapa en pantalla completa
+    const toggleBtn = document.getElementById('toggleMap');
+    const mapWrapper = document.getElementById('mapWrapper');
+
+    toggleBtn.addEventListener('click', () => {
+      mapWrapper.classList.toggle('fullscreen');
+      
+      if (mapWrapper.classList.contains('fullscreen')) {
+        toggleBtn.innerHTML = '📱 Salir de Pantalla Completa';
+        document.body.style.overflow = 'hidden';
+      } else {
+        toggleBtn.innerHTML = '🌍 Pantalla Completa';
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Cerrar pantalla completa con ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mapWrapper.classList.contains('fullscreen')) {
+        mapWrapper.classList.remove('fullscreen');
+        toggleBtn.innerHTML = '🌍 Pantalla Completa';
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Inicializar partículas cuando carga la página
+    document.addEventListener('DOMContentLoaded', createParticles);
+  </script>
+</body>
+</html>
+
+

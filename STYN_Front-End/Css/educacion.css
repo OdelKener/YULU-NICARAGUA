@@ -1,0 +1,483 @@
+/* ===== ESTILOS PARA PÁGINA DE CULTURA ===== */
+:root {
+    --color-gris-oscuro: #222222;
+    --color-gris-suave: #B0BEC5;
+    --color-blanco: #FFFFFF;
+    --color-azul-cielo: #0288D1;
+    --color-verde-bosque: #2E7D32;
+    --color-negro: #000000;
+}
+
+body {
+    background-color: var(--color-gris-suave);
+    font-family: 'Poppins', sans-serif;
+}
+
+.culture-hero {
+    background: url('../Image/cultura.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 100px 20px;
+    color: var(--color-blanco);
+    position: relative;
+    border-radius: 15px;
+    margin: 20px;
+    transition: all 0.4s ease;
+}
+
+.culture-hero h1 {
+    color: var(--color-negro);
+}
+
+.culture-hero p {
+    color: var(--color-negro);
+}
+
+.navbar {
+    background: transparent;
+    /* sin bloque de color */
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    position: absolute;
+    /* encima de la imagen */
+    top: 10px;
+    left: 20px;
+    z-index: 10;
+}
+
+.nav-link {
+    color: #fff;
+    /* sigue siendo blanco */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    /* se destaca */
+    font-weight: 600;
+}
+
+.nav-link+.nav-link::before {
+    content: ">";
+    margin: 0 5px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.culture-hero:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.culture-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    transition: all 0.4s ease;
+}
+
+.culture-hero:hover::before {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Secciones de Cultura */
+.culture-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.culture-card {
+    background: var(--color-blanco);
+    border-radius: 15px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid var(--color-azul-cielo);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.culture-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-color: var(--color-azul-cielo);
+    background: linear-gradient(135deg, var(--color-blanco) 0%, #f8f9fa 100%);
+}
+
+.culture-card h2 {
+    color: var(--color-azul-cielo);
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--color-gris-suave);
+    padding-bottom: 0.8rem;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.culture-card:hover h2 {
+    color: var(--color-verde-bosque);
+    border-bottom-color: var(--color-verde-bosque);
+}
+
+/* Grid de Cultura */
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.culture-item {
+    background: var(--color-blanco);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 2px solid var(--color-gris-suave);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.culture-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(2, 136, 209, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.culture-item:hover::before {
+    left: 100%;
+}
+
+.culture-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--color-azul-cielo);
+    background: linear-gradient(135deg, var(--color-blanco) 0%, #e3f2fd 100%);
+}
+
+.culture-item h3 {
+    color: var(--color-verde-bosque);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.culture-item:hover h3 {
+    color: var(--color-azul-cielo);
+    transform: scale(1.05);
+}
+
+.culture-item p {
+    color: var(--color-gris-oscuro);
+    line-height: 1.5;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.culture-item:hover p {
+    color: var(--color-gris-oscuro);
+}
+
+/* Grid de Comida */
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.food-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--color-blanco);
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    border: 2px solid var(--color-gris-suave);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.food-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-azul-cielo), var(--color-verde-bosque));
+    transition: width 0.4s ease;
+}
+
+.food-item:hover::after {
+    width: 100%;
+}
+
+.food-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-color: var(--color-verde-bosque);
+    background: linear-gradient(135deg, var(--color-blanco) 0%, #e8f5e8 100%);
+}
+
+.food-item h3 {
+    color: var(--color-verde-bosque);
+    margin: 1rem 0 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.food-item:hover h3 {
+    color: var(--color-azul-cielo);
+    transform: scale(1.1);
+}
+
+.food-item p {
+    color: var(--color-gris-oscuro);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    transition: all 0.3s ease;
+}
+
+/* Botón de información */
+.info-btn {
+    background: var(--color-verde-bosque);
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    transition: all 0.4s ease;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.info-btn:hover::before {
+    left: 100%;
+}
+
+.info-btn:hover {
+    background: var(--color-azul-cielo);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(2, 136, 209, 0.3);
+}
+
+/* Botón de Regreso */
+.back-button {
+    display: inline-block;
+    background: var(--color-azul-cielo);
+    color: var(--color-blanco);
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.back-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.back-button:hover::before {
+    left: 100%;
+}
+
+.back-button:hover {
+    background: var(--color-verde-bosque);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(46, 125, 50, 0.3);
+    border-color: var(--color-verde-bosque);
+}
+
+
+/* Modal de Cultura */
+.modal-culture {
+    display: none;
+    /* Esto debe estar en none inicialmente */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+.modal-culture-content {
+    background: var(--color-blanco);
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 700px;
+    max-height: 85vh;
+    position: relative;
+    animation: slideIn 0.3s ease-out;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border: 3px solid var(--color-azul-cielo);
+}
+
+.modal-culture-body {
+    padding: 2.5rem;
+    max-height: calc(85vh - 100px);
+    overflow-y: auto;
+    background: var(--color-blanco);
+}
+
+.close-culture-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-gris-oscuro);
+    cursor: pointer;
+    z-index: 10000;
+    transition: all 0.3s ease;
+    background: var(--color-blanco);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-gris-suave);
+}
+
+.close-culture-modal:hover {
+    color: var(--color-azul-cielo);
+    background: var(--color-blanco);
+    border-color: var(--color-azul-cielo);
+    transform: rotate(90deg) scale(1.1);
+}
+
+.modal-culture-text h2 {
+    color: var(--color-azul-cielo);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    border-bottom: 3px solid var(--color-gris-suave);
+    padding-bottom: 0.5rem;
+}
+
+.modal-culture-text>p {
+    color: var(--color-gris-oscuro);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.modal-culture-details {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid var(--color-verde-bosque);
+}
+
+.modal-culture-details h4 {
+    color: var(--color-verde-bosque);
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.modal-culture-details p {
+    color: var(--color-gris-oscuro);
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.modal-culture-extra {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: #fff3cd;
+    border-radius: 10px;
+    border-left: 4px solid #ffc107;
+}
+
+.modal-culture-extra h4 {
+    color: #856404;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.modal-culture-extra p {
+    color: #856404;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+/* Scroll personalizado */
+.modal-culture-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-culture-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.modal-culture-body::-webkit-scrollbar-thumb {
+    background: var(--color-azul-cielo);
+    border-radius: 4px;
+}
+
+.modal-culture-body::-webkit-scrollbar-thumb:hover {
+    background: var(--color-verde-bosque);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

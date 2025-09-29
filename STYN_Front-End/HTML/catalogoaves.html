@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Aves de Nicaragua</title>
+    <link rel="stylesheet" href="../Css/catalogoaves.css">
+</head>
+
+<body>
+    <!-- Titulo Catalogo de aves -->
+    <div class="section-header">
+        <h2>Catálogo de Aves de Nicaragua</h2>
+        <p>Descubre y conoce nuestras Aves</p>
+        <div class="breadcrumb">
+            <a href="../HTML/dashboardprincipal.html">Inicio</a>
+            <span>»</span>
+            <span>Catálogo de Aves</span>
+        </div>
+    </div>
+
+    <section id="catalogo" class="sectionCatalogo">
+        <div class="aves-grid">
+            <!-- 1. Guardabarranco -->
+            <div class="ave-card">
+                <img src="../Image/guardabarranco1.jpg" alt="Guardabarranco">
+                <h3>Guardabarranco</h3>
+                <p>Ave nacional de Nicaragua</p>
+                <span class="ave-tag">Eumomota superciliosa</span>
+                <button class="btn-modal" data-bird="guardabarranco">Mas detalles</button>
+            </div>
+
+            <!-- 2. Zopilote -->
+            <div class="ave-card">
+                <img src="../Image/Zopilote.jpg" alt="Zopilote">
+                <h3>Zopilote</h3>
+                <p>Ave carroñera común</p>
+                <span class="ave-tag">Coragyps atratus</span>
+                <button class="btn-modal" data-bird="zopilote">Mas detalles</button>
+            </div>
+
+            <!-- 3. Colibrí Esmeralda -->
+            <div class="ave-card">
+                <img src="../Image/Colibri.jpg" alt="Colibrí-Esmeralda">
+                <h3>Colibrí Esmeralda</h3>
+                <p>Pequeño y colorido</p>
+                <span class="ave-tag">Chlorostilbon canivetii</span>
+                <button class="btn-modal" data-bird="colibri">Mas detalles</button>
+            </div>
+
+            <!-- 4. Chocoyo -->
+            <div class="ave-card">
+                <img src="../Image/Chocoyo.jpg" alt="Chocoyo">
+                <h3>Chocoyo</h3>
+                <p>Loro centroamericano</p>
+                <span class="ave-tag">Amazona albifrons</span>
+                <button class="btn-modal" data-bird="chocoyo">Mas detalles</button>
+            </div>
+
+            <!-- 5. Zanate -->
+            <div class="ave-card">
+                <img src="../Image/Zanate.jpg" alt="Zanate">
+                <h3>Zanate</h3>
+                <p>Ave de canto melodioso</p>
+                <span class="ave-tag">Quiscalus nicaraguensis</span>
+                <button class="btn-modal" data-bird="zanate">Mas detalles</button>
+            </div>
+
+            <!-- 6. Pijuy -->
+            <div class="ave-card">
+                <img src="../Image/Pijuy.jpg" alt="Pijuy">
+                <h3>Pijuy</h3>
+                <p>Cuco terrestre</p>
+                <span class="ave-tag">Crotophaga sulcirostris</span>
+                <button class="btn-modal" data-bird="pijuy">Mas detalles</button>
+            </div>
+
+            <!-- 7. Urraca -->
+            <div class="ave-card">
+                <img src="../Image/urraca1.jpg" alt="Urraca">
+                <h3>Urraca</h3>
+                <p>Ave inteligente y social</p>
+                <span class="ave-tag">Calocitta formosa</span>
+                <button class="btn-modal" data-bird="urraca">Mas detalles</button>
+            </div>
+            
+            <!-- 10. Gavilán -->
+            <div class="ave-card">
+                <img src="../Image/Gavilan.png" alt="Gavilán">
+                <h3>Gavilán</h3>
+                <p>Ave rapaz común</p>
+                <span class="ave-tag">Buteo jamaicensis</span>
+                <button class="btn-modal" data-bird="gavilan">Mas detalles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Structure -->
+    <div id="modalAve" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img id="modal-img" src="" alt="Ave">
+                <div class="modal-info">
+                    <h2 id="modal-title">Guardabarranco</h2>
+                    <p id="modal-description">Ave nacional de Nicaragua</p>
+                    <span id="modal-tag" class="ave-tag">Eudocimus</span>
+                    <div class="modal-details">
+                        <h4>Información Detallada</h4>
+                        <p id="modal-full-info">Información completa sobre el ave...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JS/catalogoaves.js"></script>
+</body>
+
+</html>

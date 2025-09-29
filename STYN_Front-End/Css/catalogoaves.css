@@ -1,0 +1,291 @@
+/* ===== CATÁLOGO DE AVES ===== */
+:root {
+    --color-gris-oscuro: #222222;
+    --color-gris-suave: #B0BEC5;
+    --color-blanco: #FFFFFF;
+    --color-azul-cielo: #0288D1;
+    --color-verde-bosque: #2E7D32;
+    --color-negro: #000000;
+}
+
+.section-header {
+    background: url('../Image/CatalogoAve.png') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+    /* comienza el titulo de los pajaros*/
+    .section-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 15px;
+        z-index: 1;
+    }
+
+
+.section-header h2 {
+    font-size: 3.5rem;
+    color: var(--color-blanco);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    letter-spacing: 1px;
+}
+
+.section-header p {
+    font-size: 1.4rem;
+    color: var(--color-blanco);
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* termina el titulo de los pajaros */
+/* seccion catalogo */
+.sectionCatalogo {
+    background-color: var(--color-gris-suave);
+    padding: 60px 20px;
+    /* Espacio interno */
+    border-radius: 15px;
+    /* Bordes redondeados */
+    margin: 40px 0;
+    /* Espacio externo */
+    color: var(--color-blanco);
+}
+
+.aves-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.ave-card {
+    background: var(--color-blanco);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s;
+    border: 1px solid var(--color-gris-suave);
+}
+
+.ave-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.ave-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.ave-card h3 {
+    color: var(--color-gris-oscuro);
+    margin-bottom: 0.5rem;
+}
+
+.ave-card p {
+    color: var(--color-gris-oscuro);
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.ave-tag {
+    background: var(--color-azul-cielo);
+    color: var(--color-blanco);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+/* ===== MODAL STYLES ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+    background-color: var(--color-blanco);
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    animation: slideIn 0.3s ease-out;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-gris-oscuro);
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: var(--color-azul-cielo);
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.modal-info {
+    padding: 2rem;
+}
+
+.modal-info h2 {
+    color: var(--color-gris-oscuro);
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.modal-info p {
+    color: var(--color-gris-oscuro);
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.modal-details {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-gris-suave);
+}
+
+.modal-details h4 {
+    color: var(--color-azul-cielo);
+    margin-bottom: 0.8rem;
+}
+
+.modal-details p {
+    color: var(--color-gris-oscuro);
+    line-height: 1.6;
+}
+
+/* Botón en las tarjetas */
+.ave-card button {
+    background: var(--color-verde-bosque);
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.ave-card button:hover {
+    background: var(--color-verde-bosque);
+    transform: translateY(-2px);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .modal-body {
+        flex-direction: row;
+    }
+    
+    .modal-body img {
+        width: 40%;
+        height: auto;
+        border-radius: 15px 0 0 15px;
+    }
+    
+    .modal-info {
+        width: 60%;
+    }
+}
+
+/* ===== MIGAS DE PAN (BREADCRUMB) ===== */
+.breadcrumb {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    backdrop-filter: blur(5px);
+}
+
+.breadcrumb a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: var(--color-azul-cielo);
+}
+
+.breadcrumb span {
+    color: var(--color-blanco);
+    opacity: 0.8;
+}
+
+.breadcrumb span:last-child {
+    color: var(--color-blanco);
+    opacity: 1;
+    font-weight: 600;
+}

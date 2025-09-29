@@ -1,54 +1,222 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(to right, #2980b9, #6dd5fa);
-  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('../Image/img_loginregistro.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
 }
 
-form#form-login {
-  background-color: #fff;
-  padding: 2rem 3rem;
-  border-radius: 15px;
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
-  width: 320px;
+.login-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 450px; /* Un poco más ancho para el registro */
 }
 
-form#form-login h2 {
+.login-frame {
+  background-color: #FFFFFF;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Logo Section */
+.logo-section {
   text-align: center;
-  margin-bottom: 1.5rem;
-  color: #2c3e50;
+  margin-bottom: 2rem;
 }
 
-form#form-login label {
-  margin-top: 0.8rem;
-  margin-bottom: 0.3rem;
+.logo {
+  height: 80px;
+  width: auto;
+  max-width: 200px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo-section h1 {
   color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
   font-weight: bold;
 }
 
-form#form-login input {
-  padding: 0.6rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+.slogan {
+  color: #000000;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-bottom: 0;
 }
 
-form#form-login button {
+/* Login Form */
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.input-group {
+  margin-bottom: 1.2rem;
+}
+
+/* Fila para inputs lado a lado */
+.input-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.input-group.half {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #e1e8ed;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #3498db;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.input-group input::placeholder {
+  color: #a0a0a0;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #2980b9, #2573a7);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+}
+
+.register-link {
+  text-align: center;
   margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e1e8ed;
+}
+
+.register-link p {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.register-link a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Mensaje de error */
+.error-message {
+  background-color: #fee;
+  color: #c33;
   padding: 0.8rem;
   border-radius: 8px;
-  border: none;
-  background-color: #3498db;
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s;
+  margin-bottom: 1rem;
+  text-align: center;
+  border: 1px solid #fcc;
+  display: none;
 }
 
-form#form-login button:hover {
-  background-color: #2980b9;
+/* Responsive Design */
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+  
+  .login-frame {
+    padding: 2rem 1.5rem;
+  }
+  
+  .logo {
+    height: 60px;
+  }
+  
+  .logo-section h1 {
+    font-size: 1.5rem;
+  }
+  
+  .login-form h2 {
+    font-size: 1.3rem;
+  }
+  
+  .input-group input {
+    padding: 0.7rem 0.9rem;
+  }
+  
+  /* En móviles, los inputs se apilan */
+  .input-row {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
 }
 
+@media (max-width: 320px) {
+  .login-frame {
+    padding: 1.5rem 1rem;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  .logo-section h1 {
+    font-size: 1.3rem;
+  }
+}

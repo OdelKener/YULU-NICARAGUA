@@ -3,68 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro Guía Turístico</title>
+  <title>Registro Guía Turístico - YULU NICARAGUA</title>
   <link rel="stylesheet" href="../Css/disenioregistro_guia.css">
 </head>
 <body>
- <form id="form-registro-guia" enctype="multipart/form-data">
-    <!-- Mostrar usuario logueado -->
-    <label>Usuario:</label>
-    <input type="text" id="username" readonly>
+  <div class="form-container">
+    <!-- Header con logo -->
+    <div class="form-header">
+      <img src="../Image/logo_YULUNICARAGUA2.png" alt="Logo Yulu Nicaragua" class="logo">
+      <h1>Registro de Guía Turístico</h1>
+      <p>Únete a nuestra comunidad de guías certificados</p>
+    </div>
 
-    <label>Sexo:</label>
-    <select name="sexo" required>
-      <option value="M">Masculino</option>
-      <option value="F">Femenino</option>
-    </select>
+    <!-- Cuerpo del formulario -->
+    <div class="form-body">
+      <form id="form-registro-guia" enctype="multipart/form-data">
+        
+        <!-- Información Personal -->
+        <div class="form-section">
+          <h3 class="section-title">Información Personal</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="username">Usuario</label>
+              <input type="text" id="username" name="username" readonly>
+            </div>
+            
+            <div class="form-group">
+              <label for="sexo">Sexo</label>
+              <select name="sexo" id="sexo" required>
+                <option value="">Seleccionar...</option>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="cedula">Cédula</label>
+              <input type="text" name="cedula" id="cedula" required>
+            </div>
+          </div>
+        </div>
 
-    <label>Cédula:</label>
-    <input type="text" name="cedula" required>
+        <!-- Documentación -->
+        <div class="form-section">
+          <h3 class="section-title">Documentación</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Foto cédula frontal</label>
+              <input type="file" name="foto_cedula_frontal" accept="image/*" required class="file-input">
+            </div>
+            
+            <div class="form-group">
+              <label>Foto cédula reverso</label>
+              <input type="file" name="foto_cedula_reverso" accept="image/*" required class="file-input">
+            </div>
+            
+            <div class="form-group">
+              <label>Certificado guía (PDF/Imagen)</label>
+              <input type="file" name="certificado_guia" accept=".pdf,.jpg,.png" class="file-input">
+            </div>
+            
+            <div class="form-group">
+              <label>Licencia conducir (PDF/Imagen)</label>
+              <input type="file" name="licencia_conducir" accept=".pdf,.jpg,.png" class="file-input">
+            </div>
+          </div>
+        </div>
 
-    <label>Foto cédula frontal:</label>
-    <input type="file" name="foto_cedula_frontal" accept="image/*" required>
+        <!-- Experiencia y Especialidades -->
+        <div class="form-section">
+          <h3 class="section-title">Experiencia y Servicios</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="idiomas">Idiomas que domina</label>
+              <input type="text" name="idiomas" id="idiomas" placeholder="Ej: Español, Inglés, Francés..." required>
+            </div>
+            
+            <div class="form-group full-width">
+              <label for="especialidades">Especialidades</label>
+              <input type="text" name="especialidades" id="especialidades" placeholder="Ej: Turismo aventura, Cultural, Ecológico...">
+            </div>
+            
+            <div class="form-group full-width">
+              <label for="experiencia">Experiencia profesional</label>
+              <textarea name="experiencia" id="experiencia" required></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="anos_experiencia">Años de experiencia</label>
+              <input type="number" name="anos_experiencia" id="anos_experiencia" value="0" min="0">
+            </div>
+            
+            <div class="form-group">
+              <label for="precio_por_hora">Precio por hora ($)</label>
+              <input type="number" step="0.01" name="precio_por_hora" id="precio_por_hora" value="20.00">
+            </div>
+            
+            <div class="form-group">
+              <label for="precio_por_dia">Precio por día ($)</label>
+              <input type="number" step="0.01" name="precio_por_dia" id="precio_por_dia" value="100.00">
+            </div>
+          </div>
+        </div>
 
-    <label>Foto cédula reverso:</label>
-    <input type="file" name="foto_cedula_reverso" accept="image/*" required>
+        <!-- Contacto y Zonas -->
+        <div class="form-section">
+          <h3 class="section-title">Contacto y Cobertura</h3>
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="zonas_cobertura">Zonas de cobertura</label>
+              <input type="text" name="zonas_cobertura" id="zonas_cobertura" value="Granada" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="telefono_whatsapp">WhatsApp</label>
+              <input type="text" name="telefono_whatsapp" id="telefono_whatsapp" placeholder="+505 1234 5678">
+            </div>
+            
+            <div class="form-group">
+              <label for="enlace_facebook">Facebook</label>
+              <input type="url" name="enlace_facebook" id="enlace_facebook" placeholder="https://facebook.com/tu-perfil">
+            </div>
+            
+            <div class="form-group">
+              <label for="enlace_instagram">Instagram</label>
+              <input type="url" name="enlace_instagram" id="enlace_instagram" placeholder="https://instagram.com/tu-perfil">
+            </div>
+          </div>
+        </div>
 
-    <label>Certificado guía:</label>
-    <input type="file" name="certificado_guia" accept=".pdf,.jpg,.png">
-
-    <label>Licencia conducir:</label>
-    <input type="file" name="licencia_conducir" accept=".pdf,.jpg,.png">
-
-    <label>Idiomas:</label>
-    <input type="text" name="idiomas" placeholder="Español, Inglés, Francés" required>
-
-    <label>Especialidades:</label>
-    <input type="text" name="especialidades">
-
-    <label>Experiencia:</label>
-    <textarea name="experiencia" required></textarea>
-
-    <label>Años experiencia:</label>
-    <input type="number" name="anos_experiencia" value="0" min="0">
-
-    <label>Precio por hora:</label>
-    <input type="number" step="0.01" name="precio_por_hora" value="20.00">
-
-    <label>Precio por día:</label>
-    <input type="number" step="0.01" name="precio_por_dia" value="100.00">
-
-    <label>Zonas de cobertura:</label>
-    <input type="text" name="zonas_cobertura" value="Granada">
-
-    <label>WhatsApp:</label>
-    <input type="text" name="telefono_whatsapp">
-
-    <label>Facebook:</label>
-    <input type="url" name="enlace_facebook">
-
-    <label>Instagram:</label>
-    <input type="url" name="enlace_instagram">
-
-    <button type="submit">Registrar Guía</button>
-  </form>
+        <!-- Botón de envío -->
+        <div class="submit-container">
+          <button type="submit" class="submit-btn">Registrar como Guía Turístico</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <script src="../JS/registroguia.js"></script>
 </body>

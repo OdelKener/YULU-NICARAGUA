@@ -7,26 +7,57 @@
   <link rel="stylesheet" href="../Css/diseniologin_registro.css">
 </head>
 <body>
-  <form id="form-login">
-    <h2>Iniciar sesión</h2>
-    <form id="loginForm">
-      <input type="text" id="email" placeholder="Correo o usuario" required>
-      <input type="password" id="password" placeholder="Contraseña" required>
-      <button type="submit">Entrar</button>
-    </form>
-    <p>¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+  <div class="login-container">
+    <div class="login-frame">
+      <!-- Logo y Título -->
+      <div class="logo-section">
+        <img src="../Image/logo_YULUNICARAGUA2.png" alt="Logo Yulu Nicaragua" class="logo">
+        <h1>YULU NICARAGUA</h1>
+        <p class="slogan">"Descubre la riqueza cultural y biodiversidad"</p>
+      </div>
+
+      <!-- Formulario de Login -->
+      <form id="loginForm" class="login-form">
+        <h2>Iniciar Sesión</h2>
+        
+        <div class="input-group">
+          <input type="text" id="email" name="email" placeholder="Correo o usuario" required>
+        </div>
+        
+        <div class="input-group">
+          <input type="password" id="password" name="password" placeholder="Contraseña" required>
+        </div>
+
+        <button type="submit" class="login-btn">Entrar</button>
+
+        <div class="register-link">
+          <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+        </div>
+      </form>
+    </div>
   </div>
+
+  <!-- Script para depurar -->
+  <script>
+    // Verificar si la imagen se carga
+    window.addEventListener('load', function() {
+      const logo = document.querySelector('.logo');
+      console.log('Logo element:', logo);
+      console.log('Logo src:', logo ? logo.src : 'No encontrado');
+      
+      // Verificar si la imagen se cargó correctamente
+      if (logo) {
+        logo.onerror = function() {
+          console.error('Error cargando la imagen del logo');
+        };
+        logo.onload = function() {
+          console.log('Logo cargado correctamente');
+        };
+      }
+    });
+  </script>
 
   <script src="../JS/api.js"></script>
   <script src="../JS/auth.js"></script>
-  <script>
-    document.getElementById("loginForm").addEventListener("submit", (e) => {
-      e.preventDefault();
-      loginUser(
-        document.getElementById("email").value,
-        document.getElementById("password").value
-      );
-    });
-  </script>
 </body>
 </html>

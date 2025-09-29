@@ -9,12 +9,22 @@
 <body>
   <!-- Header -->
   <header>
-    <h1>Yulu Nicaragua</h1>
+    <div class="header-logo">
+      <img src="../image/logo_YULUNICARAGUA2.png" alt="Logo Yulu Nicaragua">
+    </div>
+    <div class="header-text">
+      <h1>YULU-NICARAGUA</h1>
+      <p class="slogan">"Descubre la riqueza cultural y biodiversidad de nuestro país"</p>
+      <div class="breadcrumb">
+            <a href="../HTML/login.html">Login</a>
+        
+        </div>
+    </div>
   </header>
 
   <!-- Contenedor de módulos -->
- <main class="menu-grid">
-    <div class="menu-item" id="catalogos">Catálogos de aves</div>
+  <main class="menu-grid">
+    <div class="menu-item" id="catalogos">Catálogos de Aves</div>
     <div class="menu-item" id="reservas-naturales">Reservas Naturales</div>
     <div class="menu-item" id="eventos">Eventos</div>
     <div class="menu-item" id="sitios-turisticos">Sitios Turísticos</div>
@@ -23,6 +33,40 @@
     <div class="menu-item" id="registrar-guia">Registrarse como Guía</div>
   </main>
 
- <script src="../JS/dashboardprincipal.js"></script>
+  <!-- Sección del Video -->
+  <section class="video-section">
+    <div class="video-container">
+      <h3 class="video-title">Descubre los Mejores Sitios de Nicaragua 2024</h3>
+      <div class="video-overlay"></div>
+      <iframe 
+        src="https://www.youtube.com/embed/ONDB-1qZhCs?autoplay=1&mute=1&controls=0&loop=1&playlist=ONDB-1qZhCs&modestbranding=1&rel=0" 
+        title="Los mejores sitios de NICARAGUA 2024🌋🇳🇮🌴" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- VERIFICA ESTA RUTA -->
+  <script src="../JS/dashboardprincipal.js"></script>
+  
+  <!-- Script para debug -->
+  <script>
+    // Verificar que los botones existen
+    document.addEventListener('DOMContentLoaded', function() {
+      const buttons = [
+        'catalogos', 'reservas-naturales', 'eventos', 
+        'sitios-turisticos', 'educativo', 'reservas', 'registrar-guia'
+      ];
+      
+      buttons.forEach(id => {
+        const element = document.getElementById(id);
+        console.log(`Botón ${id}:`, element ? 'ENCONTRADO' : 'NO ENCONTRADO');
+      });
+    });
+  </script>
 </body>
 </html>
+
